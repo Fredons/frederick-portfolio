@@ -63,3 +63,18 @@ npx vercel --prod
 ```
 
 `.vercelignore` keeps the verification screenshots and the tooling out of the deployment.
+
+## CV
+
+`tools/cv-data.js` is the single source. Three builders read it so the outputs cannot drift:
+
+```bash
+node tools/build-cv.js       # Frederick-Akam-CV.docx
+node tools/build-cv-pdf.mjs  # Frederick-Akam-CV.pdf
+node tools/build-cv-md.js    # CV-Frederick-Akam.md
+```
+
+Both document formats are built for applicant tracking systems: single column, no tables
+used for layout, no graphics, no content in headers or footers, standard font, conventional
+section names. The PDF disables ligatures on purpose, because Chrome otherwise stores "ffi"
+as one glyph and a keyword search for "Efficacy" or "workflow" then fails to match.

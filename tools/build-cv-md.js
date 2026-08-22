@@ -1,0 +1,21 @@
+const cv = require("./cv-data.js");
+const fs = require("fs");
+const L = [];
+L.push(`# ${cv.name}`, "", `**${cv.title}**`, "", cv.location, "", `${cv.contact}`, "", cv.links, "", "---", "");
+L.push("## Professional Summary", "", cv.summary, "", "---", "");
+L.push("## Core Skills", "");
+cv.skills.forEach(([k, v]) => L.push(`**${k}** ${v}`, ""));
+L.push("---", "", "## Professional Experience", "");
+cv.experience.forEach((r) => {
+  L.push(`**${r.title}** · ${r.org} · ${r.dates}`, "");
+  r.bullets.forEach((b) => L.push(`- ${b}`));
+  L.push("");
+});
+L.push("---", "", "## Selected Projects (all publicly live)", "");
+cv.projects.forEach(([n, u, d]) => L.push(`**${n}** · ${u}`, d, ""));
+cv.internal.forEach(([n, d]) => L.push(`**${n}**`, d, ""));
+L.push("---", "", "## Education", "");
+cv.education.forEach(([d, s, y]) => L.push(`**${d}** · ${s} · ${y}`, ""));
+L.push("---", "", "## Certifications and Languages", "", cv.certifications, "", cv.languages, "");
+fs.writeFileSync("CV-Frederick-Akam.md", L.join("\n"));
+console.log("wrote CV-Frederick-Akam.md");
