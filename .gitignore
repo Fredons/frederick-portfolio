@@ -6,3 +6,6 @@ node_modules/
 .vercel/
 .DS_Store
 Thumbs.db
+
+# Local only, not for the public repo
+COVER-LETTER.md
