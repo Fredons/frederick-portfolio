@@ -36,19 +36,20 @@ Software engineer with ten years of professional experience, now building AI-bac
 
 ## Professional Experience
 
-**Developer** · ProForge, Melbourne, Australia (Remote) · 2024 – Present
+**Independent Software Engineer** · Lagos, Nigeria (Remote) · 2024 – Present
 
-- Built ProForge, an AI receptionist for Australian trade businesses: voice AI answers calls around the clock, books jobs directly into calendars, sends SMS confirmations, follows up quotes, requests reviews and routes genuine emergencies to the operator. Sole developer across voice, telephony, backend and interface.
-- Built PropInfo, a multi-tenant SaaS platform for Australian buyer's agents. Uses the Claude API to generate pre-purchase property assessments against comparable sales, and computes state-specific stamp duty and lenders mortgage insurance, thirty-year investment projections, rental yield and depreciation.
+- Build and ship production web platforms end to end for Australian businesses: database schema, backend, API, interface, deployment and the operational tooling around them.
+- Built PropInfo, a multi-tenant SaaS platform for buyer's agents. Uses the Claude API to generate pre-purchase property assessments against comparable sales, and computes state-specific stamp duty and lenders mortgage insurance, thirty-year investment projections, rental yield and depreciation.
 - Designed the PropInfo data model and access layer: CRM pipeline from enquiry to settlement, live portfolio valuation, and role-based access control across shared multi-agent workspaces.
+- Built ProForge, an AI receptionist for trade businesses: voice AI answers calls around the clock, books jobs directly into calendars, sends SMS confirmations, follows up quotes and routes genuine emergencies to the operator. Sole developer across voice, telephony, backend and interface.
 - Delivered client web platforms end to end, including a six-language law firm site and a CMS-driven sponsorship platform where the client edits all content without a developer.
 - Engineered a six-scene scroll-scrubbed film homepage with frame-locked scene transitions, separate mobile encodes and server-rendered markup, so all content is present before JavaScript executes.
 
 **Software Engineer** · Seamate Maritime Integrated Services Limited, Lagos, Nigeria · 2021 – 2026
 
 - Design, development and ongoing maintenance of the company web application.
-- Conduct code reviews, diagnose and resolve defects, and improve application stability.
-- Develop features in collaboration with company executives and provide direct technical support to end users.
+- Conducted code reviews, diagnosed and resolved defects, and improved application stability.
+- Developed features in collaboration with company executives and provided direct technical support to end users.
 
 **Software Engineer** · Efficacy Technology Limited, Kaduna, Nigeria · 2016 – 2021
 
