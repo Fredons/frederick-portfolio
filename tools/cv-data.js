@@ -43,7 +43,7 @@ module.exports = {
     {
       title: "Software Engineer",
       org: "Seamate Maritime Integrated Services Limited, Lagos, Nigeria",
-      dates: "2021 – Present",
+      dates: "2021 – 2026",
       bullets: [
         "Design, development and ongoing maintenance of the company web application.",
         "Conduct code reviews, diagnose and resolve defects, and improve application stability.",
