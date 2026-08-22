@@ -6,7 +6,7 @@
 module.exports = {
   name: "Frederick Akam",
   title: "AI & Automation Engineer  |  Full-Stack Software Engineer",
-  location: "Lagos, Nigeria (UTC+1)  |  Available for remote work worldwide",
+  location: "Kaduna, Nigeria (UTC+1)  |  Available for remote work worldwide",
   contact: "akamfrederick@gmail.com  |  +234 706 632 7741",
   links: "frederickakam.vercel.app  |  github.com/Fredons",
 
@@ -31,7 +31,7 @@ module.exports = {
   experience: [
     {
       title: "Independent Software Engineer",
-      org: "Lagos, Nigeria (Remote)",
+      org: "Kaduna, Nigeria (Remote)",
       dates: "2024 \u2013 Present",
       bullets: [
         "Build and ship production web platforms end to end for Australian businesses: database schema, backend, API, interface, deployment and the operational tooling around them.",

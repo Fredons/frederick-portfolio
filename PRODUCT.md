@@ -22,7 +22,7 @@ reader can open in one click and verify.
 
 ## The person
 
-Frederick Akam. Lagos, Nigeria. BSc Computer Science Education, Enugu State University of
+Frederick Akam. Kaduna, Nigeria. BSc Computer Science Education, Enugu State University of
 Science and Technology. Software engineer at Efficacy Technology (Kaduna, 2016–2021) and
 Seamate Maritime Integrated Services (Lagos, 2021–present). Founder of ProForge.
 

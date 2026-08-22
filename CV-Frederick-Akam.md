@@ -2,7 +2,7 @@
 
 **AI & Automation Engineer  |  Full-Stack Software Engineer**
 
-Lagos, Nigeria (UTC+1)  |  Available for remote work worldwide
+Kaduna, Nigeria (UTC+1)  |  Available for remote work worldwide
 
 akamfrederick@gmail.com  |  +234 706 632 7741
 
@@ -38,7 +38,7 @@ Software engineer with ten years of professional experience, now building AI-bac
 
 ## Professional Experience
 
-**Independent Software Engineer** · Lagos, Nigeria (Remote) · 2024 – Present
+**Independent Software Engineer** · Kaduna, Nigeria (Remote) · 2024 – Present
 
 - Build and ship production web platforms end to end for Australian businesses: database schema, backend, API, interface, deployment and the operational tooling around them.
 - Built PropInfo, a multi-tenant SaaS platform for buyer's agents. Uses the Claude API to generate pre-purchase property assessments against comparable sales, and computes state-specific stamp duty and lenders mortgage insurance, thirty-year investment projections, rental yield and depreciation.
