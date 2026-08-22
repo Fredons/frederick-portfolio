@@ -2,7 +2,7 @@
 
 **Software Engineer** · Lagos, Nigeria (UTC+1) · Remote
 
-akamfrederick@gmail.com · github.com/Fredons · [portfolio URL goes here once deployed]
+akamfrederick@gmail.com · frederickakam.vercel.app · github.com/Fredons
 
 ---
 

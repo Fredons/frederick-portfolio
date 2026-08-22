@@ -6,7 +6,7 @@ const require = createRequire(import.meta.url);
 const { chromium } = require("C:/Users/Frederick Akam/Desktop/access-audit/node_modules/playwright");
 
 const OUT = path.join(process.cwd(), "_verify");
-const URL = "http://127.0.0.1:8899/";
+const URL = process.argv[2] || "http://127.0.0.1:8899/";
 
 const VIEWS = [
   { id: "desk",   w: 1440, h: 900 },
