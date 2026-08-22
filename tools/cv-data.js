@@ -59,9 +59,8 @@ module.exports = {
       org: "Efficacy Technology Limited, Kaduna, Nigeria",
       dates: "2016 \u2013 2021",
       bullets: [
-        "Developed a cloud-based SaaS product within a team of ten engineers, implementing microservices architecture and designing scalable RESTful APIs.",
-        "Integrated machine learning models to improve data analysis capability, and built automated test suites.",
-        "Resolved critical production incidents and worked with UX designers to improve interface usability.",
+        "Built and maintained websites for the company and its clients, including a school website.",
+        "Provided technical research and consultation to support client projects.",
       ],
     },
   ],
