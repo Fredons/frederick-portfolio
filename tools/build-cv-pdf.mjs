@@ -26,7 +26,7 @@ html, body, *{ font-variant-ligatures:none; font-feature-settings:"liga" 0,"clig
 body{
   margin:0; color:#1a1a1a;
   font-family:"Calibri","Carlito",-apple-system,"Segoe UI",sans-serif;
-  font-size:10.5pt; line-height:1.42;
+  font-size:10.4pt; line-height:1.33;
 }
 h1{ font-size:22pt; font-weight:700; letter-spacing:.055em; margin:0 0 3pt; text-transform:uppercase; }
 .title{ font-size:11pt; color:#444; margin:0 0 4pt; }
@@ -34,19 +34,23 @@ h1{ font-size:22pt; font-weight:700; letter-spacing:.055em; margin:0 0 3pt; text
 .meta.dark{ color:#1a1a1a; }
 h2{
   font-size:10.5pt; font-weight:700; letter-spacing:.11em; text-transform:uppercase;
-  margin:14pt 0 6pt; padding-bottom:2pt; border-bottom:.75pt solid #999;
+  margin:10pt 0 5pt; padding-bottom:2pt; border-bottom:.75pt solid #999;
   break-after:avoid;
 }
-p{ margin:0 0 4pt; }
-.role{ margin-top:7pt; break-inside:avoid; }
+p{ margin:0 0 3pt; }
+.role{ margin-top:5pt; break-inside:auto; }
+/* A long role must be allowed to split across pages, or it jumps whole to
+   the next page and pushes a two-page CV onto three. Keep the heading and
+   dates attached to the first bullet instead. */
+.role .r1, .role .r2{ break-after:avoid; }
 .role .r1{ font-size:11pt; }
 .role .r1 b{ font-weight:700; }
 .role .r2{ font-size:10pt; color:#444; font-style:italic; margin-bottom:3pt; }
 ul{ margin:0 0 0 15pt; padding:0; }
-li{ margin:0 0 3pt; break-inside:avoid; }
+li{ margin:0 0 2pt; break-inside:avoid; }
 .skill b{ font-weight:700; }
-.skill{ margin-bottom:3.5pt; }
-.proj{ margin-bottom:4pt; }
+.skill{ margin-bottom:2.8pt; }
+.proj{ margin-bottom:3pt; }
 .proj b{ font-weight:700; }
 .proj a{ color:#1f5c8b; text-decoration:underline; font-size:10pt; }
 .tight{ margin-top:6pt; }
