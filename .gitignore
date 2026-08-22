@@ -1,0 +1,8 @@
+# Verification output, regenerate with tools/verify.mjs and tools/flight.mjs
+_verify/
+_samples/
+
+node_modules/
+.vercel/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,894 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frederick Akam, Software Engineer</title>
+<meta name="description" content="Software engineer, ten years. Production web platforms, data tools and automation. Next.js, TypeScript, Supabase, Python. Lagos, Nigeria.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:        oklch(0.962 0.009 78);
+  --bone-deep:   oklch(0.935 0.013 76);
+  --ink:         oklch(0.215 0.014 62);
+  --ink-soft:    oklch(0.435 0.016 62);
+  --ink-faint:   oklch(0.605 0.014 64);
+  --rule:        oklch(0.855 0.014 74);
+  --oxide:       oklch(0.545 0.158 44);
+  --oxide-deep:  oklch(0.425 0.132 42);
+  --oxide-wash:  oklch(0.935 0.030 66);
+
+  --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --sans:  "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:  "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --gutter: clamp(1.5rem, 5vw, 5.5rem);
+  --measure: 68ch;
+  --exp: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; }
+body{
+  margin:0;
+  background:var(--bone);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:clamp(0.975rem, 0.93rem + 0.22vw, 1.075rem);
+  line-height:1.62;
+  font-feature-settings:"kern","liga";
+  -webkit-font-smoothing:antialiased;
+}
+a{ color:inherit; }
+h1,h2,h3{ margin:0; font-weight:400; }
+p{ margin:0; }
+
+.skip{
+  position:absolute; left:-9999px; top:0; z-index:10;
+  background:var(--ink); color:var(--bone); padding:.7rem 1.1rem;
+  font:500 0.85rem/1 var(--mono);
+}
+.skip:focus{ left:var(--gutter); top:.75rem; }
+
+:focus-visible{ outline:2px solid var(--oxide); outline-offset:3px; border-radius:1px; }
+
+.wrap{ max-width:78rem; margin:0 auto; padding-inline:var(--gutter); }
+
+/* ---------- masthead ---------- */
+
+.masthead{ padding-block:clamp(3.5rem,9vw,7rem) clamp(2.5rem,6vw,4rem); }
+
+.eyebrow{
+  font:500 0.7rem/1 var(--mono);
+  letter-spacing:.16em; text-transform:uppercase;
+  color:var(--oxide-deep);
+  display:flex; gap:.9rem; align-items:center; flex-wrap:wrap;
+}
+.eyebrow::after{
+  content:""; flex:1 1 3rem; height:1px; background:var(--rule); min-width:2rem;
+}
+
+.name{
+  font-family:var(--serif);
+  font-size:clamp(3.1rem, 1.6rem + 7.4vw, 8.4rem);
+  font-weight:400;
+  line-height:0.92;
+  letter-spacing:-0.025em;
+  margin-block:clamp(1.4rem,3vw,2.2rem) 0;
+  font-variation-settings:"opsz" 72;
+}
+.name em{ font-style:italic; color:var(--oxide); }
+
+.standfirst{
+  font-family:var(--serif);
+  font-size:clamp(1.24rem, 1.02rem + 0.95vw, 1.85rem);
+  line-height:1.44;
+  font-weight:300;
+  color:var(--ink);
+  max-width:32ch;
+  margin-top:clamp(1.6rem,3.5vw,2.4rem);
+  font-variation-settings:"opsz" 32;
+}
+
+.meta{
+  margin-top:clamp(2rem,4vw,3rem);
+  display:flex; flex-wrap:wrap; gap:.55rem 2.4rem;
+  font:400 0.795rem/1.5 var(--mono);
+  color:var(--ink-soft);
+  padding-top:1.1rem;
+  border-top:1px solid var(--rule);
+}
+.meta a{ color:var(--ink); text-decoration:none; border-bottom:1px solid var(--rule); padding-bottom:1px; transition:border-color .25s var(--exp), color .25s var(--exp); }
+.meta a:hover{ color:var(--oxide); border-bottom-color:var(--oxide); }
+
+/* ---------- the film ---------- */
+
+.film{ position:relative; height:280vh; }
+
+.film__stage{
+  position:sticky; top:0;
+  height:100svh; min-height:34rem;
+  overflow:hidden;
+  perspective:1150px;
+  perspective-origin:58% 47%;
+  background:var(--bone);
+}
+
+.plate{
+  --w: clamp(12rem, 20vw, 19rem);
+  position:absolute; left:50%; top:50%;
+  width:var(--w);
+  margin:0 0 0 calc(var(--w) / -2);
+  will-change:transform, opacity;
+  backface-visibility:hidden;
+}
+.plate img{
+  display:block; width:100%; height:auto;
+  border-radius:2px;
+  background:var(--bone-deep);
+  box-shadow:
+    0 1px 1px oklch(0.22 0.012 60 / .10),
+    0 14px 34px oklch(0.22 0.012 60 / .13),
+    0 40px 90px oklch(0.22 0.012 60 / .10);
+}
+.plate figcaption{
+  margin-top:.65rem;
+  font:500 0.63rem/1 var(--mono);
+  letter-spacing:.15em; text-transform:uppercase;
+  color:var(--ink-faint);
+}
+
+.film__title{
+  position:absolute; inset:0; z-index:3;
+  display:flex; flex-direction:column; justify-content:center;
+  pointer-events:none;
+  will-change:transform, opacity;
+}
+.film__title::before{
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:radial-gradient(58% 46% at 42% 50%,
+    oklch(0.962 0.009 78 / .93) 0%,
+    oklch(0.962 0.009 78 / .72) 42%,
+    oklch(0.962 0.009 78 / 0) 78%);
+}
+.film__title .inner{
+  width:100%; max-width:78rem; margin:0 auto;
+  padding-inline:var(--gutter);
+}
+.film__title .eyebrow{ max-width:none; }
+.film__title .name{ max-width:min(20ch, 52%); }
+.film__title .standfirst{ max-width:min(30ch, 46%); margin-top:clamp(1.3rem,2.4vw,1.9rem); }
+@media (max-width:64rem){ .film__title .name, .film__title .standfirst{ max-width:100%; } }
+.film__title a{ pointer-events:auto; }
+
+.film__cue{
+  position:absolute; z-index:4;
+  left:var(--gutter); bottom:clamp(1.5rem,4vh,2.75rem);
+  font:500 0.63rem/1 var(--mono);
+  letter-spacing:.18em; text-transform:uppercase;
+  color:var(--ink-faint);
+  display:flex; align-items:center; gap:.7rem;
+}
+.film__cue span{
+  display:block; width:2.5rem; height:1px; background:var(--rule);
+  position:relative; overflow:hidden;
+}
+.film__cue span::after{
+  content:""; position:absolute; inset:0;
+  background:var(--oxide);
+  transform:translateX(-100%);
+  animation:cue 2.6s var(--exp) infinite;
+}
+@keyframes cue{
+  0%{ transform:translateX(-100%); }
+  55%{ transform:translateX(0); }
+  100%{ transform:translateX(100%); }
+}
+
+/* Narrow screens get a longer lens so the corridor reads as depth
+   rather than distortion, and a shorter run so it does not overstay. */
+@media (max-width:48rem){
+  .film{ height:220vh; }
+  .film__stage{ perspective:1500px; perspective-origin:56% 45%; }
+  .plate{ --w: clamp(11.5rem, 52vw, 17rem); }
+  .film__title::before{
+    background:linear-gradient(100deg,
+      oklch(0.962 0.009 78 / .97) 0%,
+      oklch(0.962 0.009 78 / .95) 46%,
+      oklch(0.962 0.009 78 / .58) 68%,
+      oklch(0.962 0.009 78 / 0) 92%);
+  }
+  .film__title .standfirst{ max-width:23ch; }
+  .film__title .eyebrow{ font-size:0.63rem; letter-spacing:.13em; }
+}
+
+/* Short viewports: the name must not push the standfirst off the stage. */
+@media (max-height:44rem){
+  .film__stage .name{ font-size:clamp(2.5rem, 1.6rem + 5vw, 4.4rem); }
+  .film__stage .standfirst{ font-size:clamp(1.02rem,.95rem + .4vw,1.22rem); margin-top:1.1rem; }
+  .film__cue{ display:none; }
+}
+
+/* identity bar under the film */
+.ident{
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--ink);
+}
+.ident .wrap{
+  display:flex; flex-wrap:wrap; gap:.55rem 2.4rem;
+  padding-block:1.15rem;
+  font:400 0.795rem/1.5 var(--mono);
+  color:var(--ink-soft);
+}
+.ident a{ color:var(--ink); text-decoration:none; border-bottom:1px solid var(--rule); padding-bottom:1px; transition:border-color .25s var(--exp), color .25s var(--exp); }
+.ident a:hover{ color:var(--oxide); border-bottom-color:var(--oxide); }
+
+@media (prefers-reduced-motion:reduce){
+  .film{ height:auto; }
+  .film__stage{ position:static; height:auto; min-height:0; padding-block:clamp(3rem,8vw,6rem); perspective:none; }
+  .film__title{ position:static; }
+  .film__title::before{ display:none; }
+  .plate{ display:none; }
+  .film__cue{ display:none; }
+}
+
+/* ---------- section frame ---------- */
+
+.band{
+  display:flex; align-items:baseline; gap:1.2rem;
+  padding-top:clamp(3.2rem,7vw,5.5rem);
+  padding-bottom:clamp(1.4rem,3vw,2.2rem);
+}
+.band h2{
+  font:500 0.72rem/1 var(--mono);
+  letter-spacing:.17em; text-transform:uppercase;
+  color:var(--ink);
+  white-space:nowrap;
+}
+.band .count{ font:400 0.72rem/1 var(--mono); color:var(--ink-faint); }
+.band::after{ content:""; flex:1; height:1px; background:var(--ink); opacity:.22; }
+
+/* ---------- the index ---------- */
+
+.entry{
+  display:grid;
+  grid-template-columns:5.5rem minmax(0,1fr) minmax(0, 21rem);
+  gap:0 clamp(1.5rem,3.5vw,3.25rem);
+  padding-block:clamp(2rem,4.2vw,3.1rem);
+  border-top:1px solid var(--rule);
+}
+.entry:first-of-type{ border-top:1px solid var(--ink); }
+
+.entry .num{
+  font-family:var(--serif);
+  font-size:clamp(1.9rem,3.4vw,2.9rem);
+  line-height:.9;
+  color:var(--oxide);
+  font-variation-settings:"opsz" 40;
+  letter-spacing:-0.02em;
+}
+
+.entry .body{ min-width:0; }
+
+.entry h3{
+  font-family:var(--serif);
+  font-size:clamp(1.8rem, 1.25rem + 2.1vw, 3.05rem);
+  line-height:1.02;
+  letter-spacing:-0.021em;
+  font-variation-settings:"opsz" 60;
+}
+.entry h3 a{
+  text-decoration:none;
+  background-image:linear-gradient(var(--oxide),var(--oxide));
+  background-size:0% 1px; background-repeat:no-repeat; background-position:0 92%;
+  transition:background-size .5s var(--exp), color .3s var(--exp);
+}
+.entry h3 a:hover{ background-size:100% 1px; color:var(--oxide); }
+.entry h3 a::after{
+  content:"\2197"; font-family:var(--sans); font-size:.42em; vertical-align:.9em;
+  margin-left:.42em; color:var(--ink-faint); transition:color .3s var(--exp), transform .3s var(--exp);
+  display:inline-block;
+}
+.entry h3 a:hover::after{ color:var(--oxide); transform:translate(2px,-2px); }
+
+.entry .what{
+  margin-top:.65rem;
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:clamp(1.05rem,.97rem + .38vw, 1.3rem);
+  line-height:1.42;
+  color:var(--oxide-deep);
+  font-variation-settings:"opsz" 24;
+}
+.entry .detail{
+  margin-top:1.05rem;
+  max-width:var(--measure);
+  color:var(--ink-soft);
+}
+.entry .detail + .detail{ margin-top:.75rem; }
+
+.entry .side{
+  padding-top:.5rem;
+  font:400 0.755rem/1.62 var(--mono);
+  color:var(--ink-soft);
+}
+.entry .side dl{ margin:0; display:grid; grid-template-columns:4.6rem 1fr; gap:.32rem .9rem; }
+.entry .side dt{ color:var(--ink-faint); letter-spacing:.05em; text-transform:uppercase; font-size:.665rem; padding-top:.16rem; }
+.entry .side dd{ margin:0; color:var(--ink); }
+.entry .side .url{
+  display:inline-block; margin-top:1.15rem;
+  color:var(--oxide-deep); text-decoration:none;
+  border-bottom:1px solid var(--oxide-wash); padding-bottom:2px;
+  word-break:break-all;
+  transition:border-color .3s var(--exp);
+}
+.entry .side .url:hover{ border-bottom-color:var(--oxide); }
+
+/* ---------- internal systems ---------- */
+
+.internal{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));
+  gap:clamp(1.8rem,4vw,3.5rem);
+  padding-block:clamp(1.6rem,3vw,2.4rem) 0;
+  border-top:1px solid var(--ink);
+}
+.internal > div{ padding-top:1.6rem; }
+.internal h3{
+  font-family:var(--serif); font-size:clamp(1.45rem,1.2rem+.85vw,1.95rem);
+  line-height:1.08; letter-spacing:-.018em; font-variation-settings:"opsz" 36;
+}
+.internal .what{
+  margin-top:.5rem; font:400 0.73rem/1.5 var(--mono);
+  color:var(--oxide-deep); letter-spacing:.02em;
+}
+.internal p.detail{ margin-top:.85rem; color:var(--ink-soft); max-width:46ch; }
+
+/* ---------- practice ---------- */
+
+.practice{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));
+  gap:clamp(1.6rem,3vw,2.75rem) clamp(1.5rem,3vw,3rem);
+  border-top:1px solid var(--ink);
+  padding-top:clamp(1.7rem,3.5vw,2.5rem);
+}
+.practice h3{
+  font:500 0.665rem/1 var(--mono); letter-spacing:.15em; text-transform:uppercase;
+  color:var(--ink-faint); margin-bottom:.85rem;
+}
+.practice ul{ margin:0; padding:0; list-style:none; font:400 0.83rem/1.95 var(--mono); }
+.practice li{ color:var(--ink); }
+
+/* ---------- record ---------- */
+
+.record{ border-top:1px solid var(--ink); }
+.role{
+  display:grid; grid-template-columns:minmax(0,1fr) 9.5rem;
+  gap:.4rem clamp(1.5rem,3vw,2.5rem);
+  padding-block:clamp(1.3rem,2.6vw,1.9rem);
+  border-bottom:1px solid var(--rule);
+  align-items:baseline;
+}
+.role h3{ font-family:var(--serif); font-size:clamp(1.24rem,1.1rem+.6vw,1.6rem); line-height:1.2; letter-spacing:-.014em; font-variation-settings:"opsz" 28; }
+.role .org{ color:var(--ink-soft); margin-top:.28rem; font-size:.925rem; }
+.role .when{ font:400 0.755rem/1.5 var(--mono); color:var(--ink-faint); text-align:right; letter-spacing:.02em; }
+
+/* ---------- close ---------- */
+
+.close{
+  margin-top:clamp(3.5rem,8vw,6.5rem);
+  background:var(--ink);
+  color:var(--bone);
+}
+.close .wrap{ padding-block:clamp(3rem,7vw,5.5rem); }
+.close p.line{
+  font-family:var(--serif); font-weight:300;
+  font-size:clamp(1.6rem,1.15rem+2.1vw,3.1rem);
+  line-height:1.16; letter-spacing:-.02em; max-width:20ch;
+  font-variation-settings:"opsz" 60;
+}
+.close a.mail{
+  display:inline-block; margin-top:clamp(1.5rem,3vw,2.2rem);
+  font-family:var(--serif); font-style:italic;
+  font-size:clamp(1.35rem,1.05rem+1.3vw,2.25rem);
+  color:oklch(0.79 0.115 55);
+  text-decoration:none;
+  border-bottom:1px solid oklch(0.45 0.07 50);
+  padding-bottom:.12em;
+  transition:border-color .35s var(--exp), color .35s var(--exp);
+  font-variation-settings:"opsz" 40;
+}
+.close a.mail:hover{ color:oklch(0.88 0.1 60); border-bottom-color:oklch(0.79 0.115 55); }
+.close .foot{
+  margin-top:clamp(2.5rem,5vw,3.75rem);
+  padding-top:1.2rem;
+  border-top:1px solid oklch(0.34 0.014 60);
+  display:flex; flex-wrap:wrap; gap:.5rem 2.2rem;
+  font:400 0.755rem/1.6 var(--mono);
+  color:oklch(0.68 0.012 62);
+}
+.close .foot a{ color:oklch(0.86 0.012 62); text-decoration:none; border-bottom:1px solid oklch(0.4 0.014 60); }
+.close .foot a:hover{ border-bottom-color:oklch(0.79 0.115 55); }
+
+/* ---------- reveal ---------- */
+
+.rise{ opacity:0; transform:translateY(18px); }
+.rise.seen{ opacity:1; transform:none; transition:opacity .85s var(--exp), transform .85s var(--exp); }
+
+@media (prefers-reduced-motion:reduce){
+  .rise,.rise.seen{ opacity:1; transform:none; transition:none; }
+  *{ animation-duration:.01ms !important; transition-duration:.01ms !important; }
+}
+
+/* ---------- narrow ---------- */
+
+@media (max-width:60rem){
+  .entry{ grid-template-columns:3.4rem minmax(0,1fr); }
+  .entry .side{ grid-column:2; padding-top:1.35rem; }
+  .entry .side dl{ grid-template-columns:4.4rem 1fr; }
+  .role{ grid-template-columns:minmax(0,1fr); }
+  .role .when{ text-align:left; grid-row:1; }
+}
+@media (max-width:26rem){
+  .entry{ grid-template-columns:minmax(0,1fr); }
+  .entry .num{ margin-bottom:.5rem; }
+  .entry .side{ grid-column:1; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#index">Skip to the work</a>
+
+<header class="film" id="film">
+  <div class="film__stage">
+
+    <figure class="plate" data-x="240" data-y="120" data-z="-300" data-ry="-22">
+      <picture>
+        <source srcset="shots/propinfo.avif" type="image/avif">
+        <img src="shots/propinfo.webp" width="1600" height="1000" alt="PropInfo, a platform for Australian buyer&#39;s agents" decoding="async">
+      </picture>
+      <figcaption>PropInfo</figcaption>
+    </figure>
+
+    <figure class="plate" data-x="350" data-y="-80" data-z="-1300" data-ry="-22">
+      <picture>
+        <source srcset="shots/strategic.avif" type="image/avif">
+        <img src="shots/strategic.webp" width="1600" height="1000" alt="Strategic Buys, a scroll-scrubbed film for an independent property advisory" decoding="async">
+      </picture>
+      <figcaption>Strategic Buys</figcaption>
+    </figure>
+
+    <figure class="plate" data-x="200" data-y="150" data-z="-2300" data-ry="-22">
+      <picture>
+        <source srcset="shots/nikunj.avif" type="image/avif">
+        <img src="shots/nikunj.webp" width="1600" height="1000" alt="Nikunj, the commercial home of an Australian racing driver" decoding="async">
+      </picture>
+      <figcaption>Nikunj</figcaption>
+    </figure>
+
+    <figure class="plate" data-x="380" data-y="30" data-z="-3300" data-ry="-22">
+      <picture>
+        <source srcset="shots/proforge.avif" type="image/avif">
+        <img src="shots/proforge.webp" width="1600" height="1000" alt="ProForge, an AI receptionist for Australian trades" decoding="async">
+      </picture>
+      <figcaption>ProForge</figcaption>
+    </figure>
+
+    <figure class="plate" data-x="270" data-y="-130" data-z="-4300" data-ry="-22">
+      <picture>
+        <source srcset="shots/asprey.avif" type="image/avif">
+        <img src="shots/asprey.webp" width="1600" height="1000" alt="Asprey Lawyers, a Melbourne law firm site in six languages" decoding="async">
+      </picture>
+      <figcaption>Asprey Lawyers</figcaption>
+    </figure>
+
+    <figure class="plate" data-x="330" data-y="95" data-z="-5300" data-ry="-22">
+      <picture>
+        <source srcset="shots/iventicks.avif" type="image/avif">
+        <img src="shots/iventicks.webp" width="1600" height="1000" alt="iventicks, an event ticketing platform" decoding="async">
+      </picture>
+      <figcaption>iventicks</figcaption>
+    </figure>
+
+    <figure class="plate" data-x="220" data-y="-60" data-z="-6300" data-ry="-22">
+      <picture>
+        <source srcset="shots/nvrgvp.avif" type="image/avif">
+        <img src="shots/nvrgvp.webp" width="1600" height="1000" alt="NVRGVP, a content-led cause site" decoding="async">
+      </picture>
+      <figcaption>NVRGVP</figcaption>
+    </figure>
+
+    <figure class="plate" data-x="300" data-y="110" data-z="-7300" data-ry="-22">
+      <picture>
+        <source srcset="shots/propinfodemo.avif" type="image/avif">
+        <img src="shots/propinfodemo.webp" width="1600" height="1000" alt="The PropInfo front-end rebuild in progress" decoding="async">
+      </picture>
+      <figcaption>PropInfo, rebuild</figcaption>
+    </figure>
+
+    <div class="film__title">
+      <div class="inner">
+        <p class="eyebrow">Software engineer · Lagos, Nigeria · UTC+1</p>
+        <h1 class="name">Frederick<br>A<em>k</em>am</h1>
+        <p class="standfirst">Ten years building software. The last four spent shipping production
+        platforms end to end, alone, from schema to interface.</p>
+      </div>
+    </div>
+
+    <p class="film__cue">Everything here is live<span></span></p>
+
+  </div>
+</header>
+
+<div class="ident">
+  <div class="wrap">
+    <span>Available for remote contract and full-time work</span>
+    <a href="mailto:akamfrederick@gmail.com">akamfrederick@gmail.com</a>
+    <a href="https://github.com/Fredons" rel="noopener">github.com/Fredons</a>
+  </div>
+</div>
+
+<main>
+
+<section class="wrap" id="index">
+  <div class="band"><h2>Selected work</h2><span class="count">Eight live systems</span></div>
+
+  <article class="entry rise">
+    <p class="num">01</p>
+    <div class="body">
+      <h3><a href="https://propinfo.com.au/" rel="noopener">PropInfo</a></h3>
+      <p class="what">The platform that powers modern buyer's agencies.</p>
+      <p class="detail">A working day for an Australian buyer's agent used to mean twenty browser tabs:
+      comparable sales in one, census figures in another, a stamp duty calculator in a third, and a
+      spreadsheet holding it together. PropInfo collapses that into one system.</p>
+      <p class="detail">It generates AI pre-purchase assessments against comparable sales, pulls official
+      census demographics by postcode, computes state-specific stamp duty and lenders mortgage insurance,
+      projects thirty years of yield, cash flow and depreciation, and tracks the client from first
+      enquiry through to settlement. Agencies run it as teams, with role-based access across shared
+      workspaces and live portfolio valuations.</p>
+    </div>
+    <div class="side">
+      <dl>
+        <dt>Stack</dt><dd>Next.js, TypeScript, Supabase, Postgres, Claude API</dd>
+        <dt>Scope</dt><dd>Multi-tenant SaaS, RBAC, PDF reporting</dd>
+        <dt>Role</dt><dd>Sole developer, end to end</dd>
+      </dl>
+      <a class="url" href="https://propinfo.com.au/" rel="noopener">propinfo.com.au</a><br>
+      <a class="url" href="https://demo.propinfo.com.au/" rel="noopener" style="margin-top:.5rem">demo.propinfo.com.au (front-end rebuild in progress)</a>
+    </div>
+  </article>
+
+  <article class="entry rise">
+    <p class="num">02</p>
+    <div class="body">
+      <h3><a href="https://www.aspreylawyers.com/" rel="noopener">Asprey Lawyers</a></h3>
+      <p class="what">Skilled counsel, built on relationships.</p>
+      <p class="detail">A commercial and criminal firm in West Footscray, Melbourne, serving a client base
+      that does not all read English first. The site ships in six languages, English, Hindi, Punjabi, Urdu,
+      French and Vietnamese, with practice areas that open in place rather than throwing the reader to a
+      new page, and review evidence pulled through from Google.</p>
+      <p class="detail">Photography was chosen against the category instead of with it. A signed contract,
+      a barrister's wig, a set of property keys, in place of the stock handshake every other firm uses.</p>
+    </div>
+    <div class="side">
+      <dl>
+        <dt>Stack</dt><dd>Next.js 15, React 19, TypeScript, Tailwind v4</dd>
+        <dt>Motion</dt><dd>Framer Motion, Lenis</dd>
+        <dt>Role</dt><dd>Sole developer, end to end</dd>
+      </dl>
+      <a class="url" href="https://www.aspreylawyers.com/" rel="noopener">aspreylawyers.com</a>
+    </div>
+  </article>
+
+  <article class="entry rise">
+    <p class="num">03</p>
+    <div class="body">
+      <h3><a href="https://strategicbuys.com.au/" rel="noopener">Strategic Buys</a></h3>
+      <p class="what">Smarter property decisions, made independent.</p>
+      <p class="detail">The homepage is a film. Six scenes of one continuous take, scrubbed by
+      scroll, opening on an adviser&#39;s hand advancing a model home across a suburb map with a
+      gold pawn at the map&#39;s edge, then flying out over the country from there.</p>
+      <p class="detail">Adjacent scenes cross-dissolve on frame-locked seams, so the take never
+      cuts. Separate encodes for mobile, poster stills that carry the first paint, and the whole
+      thing server-rendered: the headline is a real heading and every word exists in the HTML
+      before JavaScript runs. The scrub engine only drives what is already there.</p>
+    </div>
+    <div class="side">
+      <dl>
+        <dt>Stack</dt><dd>Next.js, TypeScript, Lenis, scroll-scrubbed video</dd>
+        <dt>Scope</dt><dd>Six-scene film, chapter navigation, editorial</dd>
+        <dt>Role</dt><dd>Sole developer, end to end</dd>
+      </dl>
+      <a class="url" href="https://strategicbuys.com.au/" rel="noopener">strategicbuys.com.au</a>
+    </div>
+  </article>
+
+  <article class="entry rise">
+    <p class="num">04</p>
+    <div class="body">
+      <h3><a href="https://www.nikunj.com.au/" rel="noopener">Nikunj</a></h3>
+      <p class="what">Racing. Business. Family.</p>
+      <p class="detail">The commercial home of an Australian driver moving from Volkswagen Cup and
+      Indian rallying into Toyota 86 development at Winton, targeting national competition. The
+      brief was precise: when a prospective sponsor receives a proposal and searches the name,
+      this has to read as a serious commercial programme within seconds.</p>
+      <p class="detail">Racing record, the Daddezden content brand and the partnership pitch all
+      sit under one identity. Every career fact is client-editable through an embedded studio, so
+      the record stays current without a developer. Partnership enquiries land in a database
+      rather than an inbox.</p>
+    </div>
+    <div class="side">
+      <dl>
+        <dt>Stack</dt><dd>Next.js, TypeScript, Sanity CMS, Supabase</dd>
+        <dt>Scope</dt><dd>Brand, CMS, sponsor pipeline, GA4</dd>
+        <dt>Role</dt><dd>Sole developer, end to end</dd>
+      </dl>
+      <a class="url" href="https://www.nikunj.com.au/" rel="noopener">nikunj.com.au</a>
+    </div>
+  </article>
+
+  <article class="entry rise">
+    <p class="num">05</p>
+    <div class="body">
+      <h3><a href="https://eventicket-psi.vercel.app/" rel="noopener">iventicks</a></h3>
+      <p class="what">Ticketing, including the parts nobody demos.</p>
+      <p class="detail">Selling a ticket is the easy half. This one handles the other half: fraud detection
+      on purchase patterns, refunds, event cancellation with money owed back to hundreds of holders at once,
+      and an archive path for events that have already run.</p>
+      <p class="detail">Installable as a progressive web app, because the person scanning tickets at a gate
+      is on a phone with unreliable signal, not a desktop.</p>
+    </div>
+    <div class="side">
+      <dl>
+        <dt>Stack</dt><dd>Next.js, TypeScript, Supabase, Postgres</dd>
+        <dt>Scope</dt><dd>Payments, fraud rules, refunds, PWA</dd>
+        <dt>Role</dt><dd>Sole developer, end to end</dd>
+      </dl>
+      <a class="url" href="https://eventicket-psi.vercel.app/" rel="noopener">eventicket-psi.vercel.app</a>
+    </div>
+  </article>
+
+  <article class="entry rise">
+    <p class="num">06</p>
+    <div class="body">
+      <h3><a href="https://www.proforge.com.au/" rel="noopener">ProForge</a></h3>
+      <p class="what">Never miss another job.</p>
+      <p class="detail">An AI receptionist for Australian trades. A plumber under a house cannot answer
+      the phone, and the caller rings the next plumber. ProForge picks up instead, in an Australian voice,
+      any hour, books the job straight into the calendar, texts the customer a confirmation, chases the
+      quote, and puts a genuine emergency through to the tradie directly.</p>
+      <p class="detail">The marketing site argues in scenarios rather than feature lists, counts the
+      revenue a missed call actually costs, and lets a prospect play real recorded calls before paying
+      anything. Operators run the business from a separate dashboard.</p>
+    </div>
+    <div class="side">
+      <dl>
+        <dt>Stack</dt><dd>Next.js, TypeScript, Supabase, n8n, Vercel</dd>
+        <dt>Scope</dt><dd>Voice AI, telephony, booking, SMS, billing</dd>
+        <dt>Role</dt><dd>Sole developer, end to end</dd>
+      </dl>
+      <a class="url" href="https://www.proforge.com.au/" rel="noopener">proforge.com.au</a><br>
+      <a class="url" href="https://app.proforge.com.au/" rel="noopener" style="margin-top:.5rem">app.proforge.com.au (operator dashboard)</a>
+    </div>
+  </article>
+
+  <article class="entry rise">
+    <p class="num">07</p>
+    <div class="body">
+      <h3><a href="https://www.nvrgvp.org/" rel="noopener">NVRGVP</a></h3>
+      <p class="what">A cause site built to be found.</p>
+      <p class="detail">Content-led, structured for search and for sharing, with provider logic that
+      resolves by country so the right information reaches the right visitor.</p>
+    </div>
+    <div class="side">
+      <dl>
+        <dt>Stack</dt><dd>Next.js, TypeScript</dd>
+        <dt>Role</dt><dd>Sole developer, end to end</dd>
+      </dl>
+      <a class="url" href="https://www.nvrgvp.org/" rel="noopener">nvrgvp.org</a>
+    </div>
+  </article>
+</section>
+
+<section class="wrap">
+  <div class="band"><h2>Systems without a public front</h2></div>
+  <div class="internal">
+    <div class="rise">
+      <h3>ChargeCore</h3>
+      <p class="what">Off-grid solar EV charging, OCPP</p>
+      <p class="detail">A charge point management platform on a CitrineOS fork, built for markets where
+      the grid is the problem rather than the solution. Metering, session billing and tariff logic against
+      solar supply. Currently passing gate tests on billable sessions.</p>
+    </div>
+    <div class="rise">
+      <h3>access-audit</h3>
+      <p class="what">WCAG 2.1 and 2.2 AA conformance scanner</p>
+      <p class="detail">Headless auditing that produces dated, hashed evidence records rather than a score.
+      Detects accessibility overlay vendors by script signature, separates automated findings from what
+      genuinely needs manual screen reader assessment, and states the difference plainly in the report.</p>
+    </div>
+    <div class="rise">
+      <h3>Automation practice</h3>
+      <p class="what">n8n, Claude API, self-hosted</p>
+      <p class="detail">Workflow automation and LLM-backed tooling running on owned infrastructure:
+      document extraction, enrichment pipelines, scheduled reporting, and agent workflows wired into
+      Postgres and third-party APIs.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="band"><h2>Practice</h2></div>
+  <div class="practice rise">
+    <div>
+      <h3>Languages</h3>
+      <ul><li>TypeScript</li><li>JavaScript</li><li>Python</li><li>SQL</li><li>C++</li></ul>
+    </div>
+    <div>
+      <h3>Interface</h3>
+      <ul><li>Next.js, App Router</li><li>React</li><li>Tailwind</li><li>Framer Motion</li><li>Lenis</li></ul>
+    </div>
+    <div>
+      <h3>Data</h3>
+      <ul><li>Supabase</li><li>Postgres</li><li>PostGIS</li><li>Sanity</li><li>REST design</li></ul>
+    </div>
+    <div>
+      <h3>AI and automation</h3>
+      <ul><li>Claude API</li><li>Agentic tooling</li><li>Claude Code</li><li>n8n</li><li>Prompt and eval design</li></ul>
+    </div>
+    <div>
+      <h3>Infrastructure</h3>
+      <ul><li>Vercel</li><li>Hetzner, self-hosted</li><li>Docker</li><li>CI/CD</li><li>Observability</li></ul>
+    </div>
+    <div>
+      <h3>Quality</h3>
+      <ul><li>Playwright</li><li>axe-core</li><li>WCAG 2.2 AA</li><li>Core Web Vitals</li><li>Code review</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="band"><h2>Record</h2></div>
+  <div class="record rise">
+    <div class="role">
+      <div>
+        <h3>Software Engineer</h3>
+        <p class="org">Seamate Maritime Integrated Services, Lagos</p>
+      </div>
+      <p class="when">2021 to present</p>
+    </div>
+    <div class="role">
+      <div>
+        <h3>Developer</h3>
+        <p class="org">ProForge, AI receptionist for Australian trades</p>
+      </div>
+      <p class="when">2024 to present</p>
+    </div>
+    <div class="role">
+      <div>
+        <h3>Software Engineer</h3>
+        <p class="org">Efficacy Technology Limited, Kaduna</p>
+      </div>
+      <p class="when">2016 to 2021</p>
+    </div>
+    <div class="role">
+      <div>
+        <h3>BSc, Computer Science Education</h3>
+        <p class="org">Enugu State University of Science and Technology</p>
+      </div>
+      <p class="when">2011 to 2014</p>
+    </div>
+    <div class="role">
+      <div>
+        <h3>National Diploma, Telecommunication Technology</h3>
+        <p class="org">Innovation Institute of Technology, Kaduna</p>
+      </div>
+      <p class="when">2008 to 2010</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="close">
+  <div class="wrap">
+    <p class="line rise">Every system above is live. Open one and check it.</p>
+    <a class="mail rise" href="mailto:akamfrederick@gmail.com">akamfrederick@gmail.com</a>
+    <div class="foot">
+      <span>Frederick Akam</span>
+      <span>Lagos, Nigeria · UTC+1</span>
+      <a href="https://github.com/Fredons" rel="noopener">github.com/Fredons</a>
+      <span>Remote contract and full-time</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* The film. A corridor of live work, flown through on scroll.
+   Transform and opacity only. No video, no layout thrash. */
+(function(){
+  var film = document.getElementById('film');
+  if (!film) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var title  = film.querySelector('.film__title');
+  var plates = Array.prototype.slice.call(film.querySelectorAll('.plate'));
+  if (!plates.length) return;
+
+  var conf = plates.map(function(el){
+    return { el:el, x:+el.dataset.x, y:+el.dataset.y, z:+el.dataset.z, ry:+el.dataset.ry };
+  });
+
+  var TRAVEL = 8300;
+  var mx = 0, my = 0, tx = 0, ty = 0;
+  var xs = 1, coarse = false;
+
+  function measure(){
+    // Pull the corridor walls inward on narrow screens so plates stay in frame
+    // instead of flying past off-canvas.
+    xs = Math.max(0.62, Math.min(1, window.innerWidth / 1240));
+    coarse = window.matchMedia('(pointer: coarse)').matches;
+  }
+  measure();
+  window.addEventListener('resize', measure, { passive:true });
+
+  window.addEventListener('pointermove', function(e){
+    if (coarse) return;
+    tx = (e.clientX / window.innerWidth  - 0.5) * 2;
+    ty = (e.clientY / window.innerHeight - 0.5) * 2;
+  }, { passive:true });
+
+  function clamp(v,a,b){ return v < a ? a : (v > b ? b : v); }
+
+  function frame(){
+    var r    = film.getBoundingClientRect();
+    var span = film.offsetHeight - window.innerHeight;
+    var p    = span > 0 ? clamp(-r.top / span, 0, 1) : 0;
+
+    mx += (tx - mx) * 0.055;
+    my += (ty - my) * 0.055;
+
+    for (var i = 0; i < conf.length; i++){
+      var c = conf[i];
+      var z = c.z + p * TRAVEL;
+      var x = c.x * xs + mx * 34;
+      var y = c.y + my * 24;
+
+      var o = clamp((z + 5200) / 1500, 0, 1);         // resolve out of the distance
+      if (z > 480) o = Math.min(o, clamp((900 - z) / 420, 0, 1)); // dissolve past camera
+
+      c.el.style.transform = 'translate3d(' + x + 'px,' + y + 'px,' + z + 'px) rotateY(' + c.ry + 'deg)';
+      c.el.style.opacity = o;
+    }
+
+    if (title){
+      var tp = clamp((p - 0.16) / 0.26, 0, 1);
+      title.style.opacity = 1 - tp;
+      title.style.transform = 'translate3d(0,' + (-tp * 84) + 'px,0)';
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+(function(){
+  var els = document.querySelectorAll('.rise');
+  if (!('IntersectionObserver' in window) ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    els.forEach(function(el){ el.classList.add('seen'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('seen'); io.unobserve(e.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+</body>
+</html>
