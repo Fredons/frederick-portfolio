@@ -88,8 +88,7 @@ ${cv.education.map(([d, s, y]) => `
   <p class="r2">${esc(y)}</p>
 </div>`).join("")}
 
-<h2>Certifications and Languages</h2>
-<p>${esc(cv.certifications)}</p>
+<h2>Languages</h2>
 <p>${esc(cv.languages)}</p>
 
 </body></html>`;

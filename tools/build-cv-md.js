@@ -16,6 +16,6 @@ cv.projects.forEach(([n, u, d]) => L.push(`**${n}** · ${u}`, d, ""));
 cv.internal.forEach(([n, d]) => L.push(`**${n}**`, d, ""));
 L.push("---", "", "## Education", "");
 cv.education.forEach(([d, s, y]) => L.push(`**${d}** · ${s} · ${y}`, ""));
-L.push("---", "", "## Certifications and Languages", "", cv.certifications, "", cv.languages, "");
+L.push("---", "", "## Languages", "", cv.languages, "");
 fs.writeFileSync("CV-Frederick-Akam.md", L.join("\n"));
 console.log("wrote CV-Frederick-Akam.md");

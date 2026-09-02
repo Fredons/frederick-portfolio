@@ -126,8 +126,7 @@ const doc = new Document({
       section("Education"),
       ...cv.education.flatMap(([d, s, y]) => role(d, s, y)),
 
-      section("Certifications and Languages"),
-      line(cv.certifications, { after: 60 }),
+      section("Languages"),
       line(cv.languages, { after: 0 }),
     ],
   }],
