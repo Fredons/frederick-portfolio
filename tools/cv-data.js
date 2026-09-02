@@ -24,7 +24,7 @@ module.exports = {
     ["AI and automation", "Anthropic Claude API, Claude Agent SDK, Claude Code, agentic workflows, tool and function definitions, prompt design and iteration, model output evaluation, voice AI integration (Vapi, Twilio), n8n workflow automation"],
     ["Frontend", "TypeScript, JavaScript, React, Next.js (App Router), Tailwind CSS, Framer Motion, state management, input validation, error and loading states, responsive and accessible interfaces"],
     ["Backend", "Node.js, Next.js route handlers, REST API design, authentication and sessions (NextAuth), role-based access control, request validation, error handling, webhooks"],
-    ["Data", "PostgreSQL, Supabase, SQL schema design and migrations, PostGIS, SQLite, Sanity CMS, multi-tenant architecture"],
+    ["Data", "PostgreSQL, Supabase, SQL schema design and migrations, PostGIS, geospatial and ETL pipelines at multi-million-record scale, SQLite, Sanity CMS, multi-tenant architecture"],
     ["Python", "Data processing, ETL pipelines, API clients, scraping and automation scripts (httpx, Playwright, openpyxl, PyYAML)"],
     ["Infrastructure", "Vercel, self-hosted Hetzner, Docker, Git, CI/CD pipelines, observability and analytics instrumentation"],
     ["Quality", "Playwright, axe-core, automated testing, code review, debugging across frontend, backend and database, WCAG 2.2 AA, Core Web Vitals"],
@@ -39,6 +39,7 @@ module.exports = {
         "Build and ship production web platforms end to end for Australian businesses: database schema, backend, API, AI layer, interface, deployment and the operational tooling around them.",
         "Built PropInfo, a multi-tenant SaaS platform that collapses a buyer's agent's twenty-tab research workflow into one system. The Claude API generates pre-purchase property assessments against comparable sales, reconciled against deterministic modelling: state-specific stamp duty and lenders mortgage insurance, thirty-year yield, cash flow and depreciation projections.",
         "Designed the PropInfo data model and access layer: CRM pipeline from first enquiry to settlement, live portfolio valuation, and role-based access control across shared multi-agent workspaces.",
+        "Built PropInfo's data layer for an investor-focused direction of the product: a Python ETL pipeline into PostGIS loading 5.88 million records. 5.1 million geocoded G-NAF addresses, 239,895 NSW property sales, 447,794 VIC crime records, 63,673 Census 2021 records by postcode, postal boundaries for map overlays, and RBA cash rate history feeding the investment calculator.",
         "Built ProForge, an AI receptionist that recovers revenue trade businesses lose to unanswered calls. Voice AI answers around the clock, qualifies the caller, books the job into the calendar, sends SMS confirmation, follows up quotes and escalates genuine emergencies to the operator. Twilio carries the numbers and telephony, Vapi handles the speech layer. Sole developer across voice, automation, backend, marketing site and a separate operator dashboard with its own billing and provisioning.",
         "Built iventicks, an event ticketing platform, across 95 server-side API endpoints: authentication and sessions, guest account claiming, role-based admin, payments, refunds, fraud detection on purchase patterns, bulk event cancellation returning money to hundreds of holders at once, organiser payouts, analytics, data export, and a live check-in stream with offline sync.",
         "Wrote standalone Python tooling for data processing and third-party API clients, including a lead pipeline on httpx and openpyxl, and a headless accessibility scanner on Playwright.",
@@ -69,7 +70,7 @@ module.exports = {
   ],
 
   projects: [
-    ["PropInfo", "propinfo.com.au", "Multi-tenant SaaS for Australian buyer's agents. Claude API property assessments reconciled against deterministic financial modelling, CRM, RBAC. Next.js, TypeScript, Supabase, Postgres."],
+    ["PropInfo", "propinfo.com.au", "Multi-tenant SaaS for Australian buyer's agents. Claude API property assessments reconciled against deterministic financial modelling, CRM, RBAC, and a PostGIS data layer of 5.88M records loaded by a Python ETL pipeline. Next.js, TypeScript, Supabase, Postgres, PostGIS."],
     ["ProForge", "proforge.com.au", "AI phone receptionist for trade businesses. Twilio telephony, Vapi voice layer, calendar booking, SMS, quote follow-up. Next.js, TypeScript, Supabase, n8n."],
     ["iventicks", "eventicket-psi.vercel.app", "Event ticketing across 95 endpoints. Payments, fraud detection, refunds, bulk cancellation, payouts, offline-sync check-in, PWA."],
     ["Strategic Buys", "strategicbuys.com.au", "Property advisory site built as a six-scene scroll-scrubbed film, frame-locked seams, server-rendered."],
@@ -81,6 +82,7 @@ module.exports = {
   internal: [
     ["plan-gate  (github.com/Fredons/plan-gate)", "A deterministic gate over AI-generated training plans. The model owns judgement, tested code owns the numbers, and only the code can publish. The README documents where the first version broke: the repair agent was handed a diagnosis instead of the arithmetic, so it trimmed 20% when the maths needed 58%."],
     ["access-audit  (github.com/Fredons/access-audit)", "Headless WCAG 2.1 and 2.2 AA scanner on Playwright and axe-core. Dated, hash-verified evidence records, overlay vendor fingerprinting by script signature, and a re-scan with the overlay blocked to report the delta."],
+    ["JARVIS", "A local-first AI operating layer for Windows, in development. Tauri 2 in Rust owns the window, tray, global hotkey and sidecar lifecycle; a Node sidecar runs the Claude Agent SDK with tools into the real OS; memory persists in SQLite with FTS5 and mirrors one-way to a markdown vault. Every run carries a hard cost ceiling. A milestone counts as done when it survives a week of daily use, not when the code merges."],
     ["ChargeCore", "Charge point management for off-grid solar EV charging on a CitrineOS fork with OCPP. Metering, session billing, tariff logic against solar supply."],
   ],
 

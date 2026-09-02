@@ -561,10 +561,15 @@ p{ margin:0; }
       projects thirty years of yield, cash flow and depreciation, and tracks the client from first
       enquiry through to settlement. Agencies run it as teams, with role-based access across shared
       workspaces and live portfolio valuations.</p>
+      <p class="detail">Underneath it is a data layer built for an investor-focused direction of the
+      product: a Python ETL pipeline into PostGIS holding 5.88 million records. 5.1 million geocoded
+      G-NAF addresses, 239,895 NSW property sales, 447,794 VIC crime records, 63,673 Census 2021 records
+      by postcode, postal boundaries for the map overlays, and RBA cash rate history feeding the
+      investment calculator.</p>
     </div>
     <div class="side">
       <dl>
-        <dt>Stack</dt><dd>Next.js, TypeScript, Supabase, Postgres, Claude API</dd>
+        <dt>Stack</dt><dd>Next.js, TypeScript, Supabase, Postgres, PostGIS, Python, Claude API</dd>
         <dt>Scope</dt><dd>Multi-tenant SaaS, RBAC, PDF reporting</dd>
         <dt>Role</dt><dd>Sole developer, end to end</dd>
       </dl>
@@ -708,6 +713,14 @@ p{ margin:0; }
 <section class="wrap">
   <div class="band"><h2>Systems without a public front</h2></div>
   <div class="internal">
+    <div class="rise">
+      <h3>JARVIS</h3>
+      <p class="what">Local-first AI operating layer for Windows</p>
+      <p class="detail">In development. Tauri 2 in Rust owns the window, tray, global hotkey and sidecar
+      lifecycle. A Node sidecar runs the Claude Agent SDK with tools into the real OS. Memory persists in
+      SQLite with FTS5 and mirrors one way into a markdown vault, and every run carries a hard cost
+      ceiling. A milestone counts as done when it survives a week of daily use, not when the code merges.</p>
+    </div>
     <div class="rise">
       <h3>ChargeCore</h3>
       <p class="what">Off-grid solar EV charging, OCPP</p>
