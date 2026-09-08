@@ -426,11 +426,13 @@ p{ margin:0; }
 
 /* ---------- reveal ---------- */
 
-.rise{ opacity:0; transform:translateY(18px); }
-.rise.seen{ opacity:1; transform:none; transition:opacity .85s var(--exp), transform .85s var(--exp); }
+/* Visible by default. Only a live script hides these, so a blocked bundle or a
+   parse error can never leave the work invisible. */
+.js-reveal .rise{ opacity:0; transform:translateY(18px); }
+.js-reveal .rise.seen{ opacity:1; transform:none; transition:opacity .85s var(--exp), transform .85s var(--exp); }
 
 @media (prefers-reduced-motion:reduce){
-  .rise,.rise.seen{ opacity:1; transform:none; transition:none; }
+  .rise,.js-reveal .rise,.js-reveal .rise.seen{ opacity:1; transform:none; transition:none; }
   *{ animation-duration:.01ms !important; transition-duration:.01ms !important; }
 }
 
@@ -569,7 +571,7 @@ p{ margin:0; }
     </div>
     <div class="side">
       <dl>
-        <dt>Stack</dt><dd>Next.js, TypeScript, Supabase, Postgres, PostGIS, Python, Claude API</dd>
+        <dt>Stack</dt><dd>Next.js, TypeScript, Supabase, Postgres, PostGIS, Python, OpenAI API</dd>
         <dt>Scope</dt><dd>Multi-tenant SaaS, RBAC, PDF reporting</dd>
         <dt>Role</dt><dd>Sole developer, end to end</dd>
       </dl>
@@ -711,8 +713,18 @@ p{ margin:0; }
 </section>
 
 <section class="wrap">
-  <div class="band"><h2>Systems without a public front</h2></div>
+  <div class="band"><h2>In development and internal systems</h2></div>
   <div class="internal">
+    <div class="rise">
+      <h3>ConvoBook</h3>
+      <p class="what">WhatsApp-native booking, in development</p>
+      <p class="detail">A booking and ordering platform that lives in the chat a customer already has
+      open. The Claude API reads an inbound message, works out what the customer wants and pulls the
+      fields the booking needs out of the sentence, prompted against context assembled per business, so
+      someone can book in one message instead of walking a menu tree. Multi-tenant across eleven industry
+      templates, with availability and capacity engines, Stripe and Paystack, and token and cost logged
+      on every call. <a href="https://convo-book.vercel.app">convo-book.vercel.app</a></p>
+    </div>
     <div class="rise">
       <h3>JARVIS</h3>
       <p class="what">Local-first AI operating layer for Windows</p>
@@ -729,11 +741,30 @@ p{ margin:0; }
       solar supply. Currently passing gate tests on billable sessions.</p>
     </div>
     <div class="rise">
+      <h3>plan-gate</h3>
+      <p class="what">A gate that refuses to publish an AI-generated training week</p>
+      <p class="detail">Generate, validate, repair, validate, then publish or block. The model owns the
+      judgement: which session, how to periodise, what to say to the athlete. Tested code owns the
+      numbers, and only the code can publish. No model runs inside the validator, deliberately. Six rules
+      cover acute-to-chronic workload, week-on-week progression, consecutive hard days, rest and taper,
+      with one repair attempt before it blocks, because a model given unlimited retries against a checker
+      is not being corrected, it is brute-forcing its way past the check. It replays recorded fixtures
+      with no API key, so the pipeline is inspectable without credentials. The README documents where the
+      first version broke, which is the part worth reading: the repair agent was handed a diagnosis
+      rather than a target, so it trimmed about 20% when the arithmetic needed 58%. The fix was to
+      compute the budget and hand over the number. A bad paragraph is an annoyance. A bad training week
+      is an injury. <a href="https://github.com/Fredons/plan-gate">github.com/Fredons/plan-gate</a></p>
+    </div>
+    <div class="rise">
       <h3>access-audit</h3>
       <p class="what">WCAG 2.1 and 2.2 AA conformance scanner</p>
       <p class="detail">Headless auditing that produces dated, hashed evidence records rather than a score.
       Detects accessibility overlay vendors by script signature, separates automated findings from what
-      genuinely needs manual screen reader assessment, and states the difference plainly in the report.</p>
+      genuinely needs manual screen reader assessment, and states the difference plainly in the report.
+      A second rule set reads the JavaScript a page serves every visitor and reports database credentials
+      that should never have reached the browser. It decodes and never connects, because using a key a
+      site leaked is unauthorised access however carelessly it was exposed.
+      <a href="https://github.com/Fredons/access-audit">github.com/Fredons/access-audit</a></p>
     </div>
     <div class="rise">
       <h3>Automation practice</h3>
@@ -901,18 +932,62 @@ p{ margin:0; }
 })();
 
 (function(){
-  var els = document.querySelectorAll('.rise');
+  var els = Array.prototype.slice.call(document.querySelectorAll('.rise'));
+  if (!els.length) return;
+
+  function reveal(el){ el.classList.add('seen'); }
+
   if (!('IntersectionObserver' in window) ||
       window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    els.forEach(function(el){ el.classList.add('seen'); });
+    els.forEach(reveal);
     return;
   }
+
+  // Hide them only now that the reveal is definitely going to run.
+  document.documentElement.classList.add('js-reveal');
+
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
-      if (e.isIntersecting) { e.target.classList.add('seen'); io.unobserve(e.target); }
+      if (e.isIntersecting) { reveal(e.target); io.unobserve(e.target); }
     });
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
   els.forEach(function(el){ io.observe(el); });
+
+  // The observer alone is not enough. It only ever fires on a crossing, so an
+  // element the page never crosses stays at opacity 0 for the whole session:
+  // a reload with the scroll position restored, a deep link, a bfcache back
+  // navigation, or a flick fast enough to outrun a throttled callback. This
+  // sweep reveals anything already at or above the fold. It is cheap and
+  // idempotent, so it is safe to run often.
+  function sweep(){
+    // A context that reports no viewport height (a hidden iframe, a prerender,
+    // a thumbnail or link-preview capture) never fires IntersectionObserver
+    // either. Fail open there and show everything, because computing an edge of
+    // zero would reveal nothing and leave the page blank.
+    var vh = window.innerHeight;
+    if (!vh) { els.forEach(reveal); return; }
+    var edge = vh * 0.92;
+    for (var i = 0; i < els.length; i++) {
+      if (!els[i].classList.contains('seen') &&
+          els[i].getBoundingClientRect().top < edge) { reveal(els[i]); io.unobserve(els[i]); }
+    }
+  }
+
+  var queued = false;
+  function schedule(){
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(function(){ queued = false; sweep(); });
+  }
+
+  sweep();
+  addEventListener('scroll', schedule, { passive: true });
+  addEventListener('resize', schedule, { passive: true });
+  addEventListener('pageshow', schedule);
+  addEventListener('load', schedule);
+  document.addEventListener('visibilitychange', function(){ if (!document.hidden) schedule(); });
+  // Late webfont and image loads shift layout after the first sweep.
+  setTimeout(sweep, 300); setTimeout(sweep, 1200); setTimeout(sweep, 3000);
 })();
 </script>
 
