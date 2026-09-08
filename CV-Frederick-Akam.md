@@ -94,7 +94,7 @@ Headless WCAG 2.1 and 2.2 AA scanner on Playwright and axe-core. Dated, hash-ver
 **JARVIS**
 A local-first AI operating layer for Windows, in development. Tauri 2 in Rust owns the window, tray, global hotkey and sidecar lifecycle; a Node sidecar runs the Claude Agent SDK with tools into the real OS; memory persists in SQLite with FTS5 and mirrors one-way to a markdown vault. Every run carries a hard cost ceiling, and a golden set of agent behaviours has to pass before a runtime or memory change merges. A milestone counts as done when it survives a week of daily use, not when the code merges.
 
-**ConvoBook  (convo-book.vercel.app)**
+**ConvoBook**
 A WhatsApp-native booking and ordering platform for service businesses, in development. The Claude API parses an inbound message into a structured intent and extracts the fields the workflow needs, prompted against per-tenant context assembled from the database, so a customer can book in one message instead of walking a menu tree. Multi-tenant across industries with configurable workflow steps, availability and capacity engines, Stripe and Paystack payments, and per-call token and cost logging for billing. Next.js, TypeScript, Prisma, Postgres, WhatsApp Cloud API.
 
 **ChargeCore**
