@@ -1,6 +1,6 @@
 # Frederick Akam
 
-**Full-Stack Product Engineer  |  AI and Automation**
+**AI Automation Specialist  |  Full-Stack Web Developer**
 
 Kaduna, Nigeria (UTC+1)  |  Remote, worldwide
 

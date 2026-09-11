@@ -5,7 +5,7 @@
 
 module.exports = {
   name: "Frederick Akam",
-  title: "Full-Stack Product Engineer  |  AI and Automation",
+  title: "AI Automation Specialist  |  Full-Stack Web Developer",
   location: "Kaduna, Nigeria (UTC+1)  |  Remote, worldwide",
   contact: "akamfrederick@gmail.com  |  +234 706 632 7741",
   links: "frederickakam.vercel.app  |  github.com/Fredons",
