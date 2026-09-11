@@ -79,6 +79,7 @@ ${cv.experience.map((r) => `
 <h2>Selected Projects (all publicly live)</h2>
 ${cv.projects.map(([n, u, d]) =>
   `<p class="proj"><b>${esc(n)}</b> <a href="https://${esc(u)}">${esc(u)}</a> &ndash; ${esc(d)}</p>`).join("")}
+<h2>In Development and Internal Systems</h2>
 ${cv.internal.map(([n, d]) => `<p class="proj"><b>${esc(n)}</b> &ndash; ${esc(d)}</p>`).join("")}
 
 <h2>Education</h2>

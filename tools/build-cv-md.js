@@ -13,6 +13,7 @@ cv.experience.forEach((r) => {
 });
 L.push("---", "", "## Selected Projects (all publicly live)", "");
 cv.projects.forEach(([n, u, d]) => L.push(`**${n}** · ${u}`, d, ""));
+L.push("---", "", "## In Development and Internal Systems", "");
 cv.internal.forEach(([n, d]) => L.push(`**${n}**`, d, ""));
 L.push("---", "", "## Education", "");
 cv.education.forEach(([d, s, y]) => L.push(`**${d}** · ${s} · ${y}`, ""));

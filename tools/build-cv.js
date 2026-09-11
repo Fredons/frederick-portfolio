@@ -121,6 +121,8 @@ const doc = new Document({
 
       section("Selected Projects (all publicly live)"),
       ...cv.projects.map(project),
+
+      section("In Development and Internal Systems"),
       ...cv.internal.map(internal),
 
       section("Education"),
