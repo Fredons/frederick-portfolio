@@ -6,14 +6,14 @@ A single-page portfolio for Frederick Akam. One static HTML file, no framework, 
 
 The hero is a corridor of live production sites in 3D space that you fly through on scroll.
 Eight projects arrive out of the distance, grow, and sweep past the camera, then the page
-resolves into a dense index of the work. Everything on it is a real shipped system with a
+resolves into a dense index of the work. Every site in the corridor is a real shipped system with a
 URL you can open.
 
 ## Why it is built this way
 
 The alternative was a scroll-scrubbed video hero, which is the usual answer for this kind
-of page. Six full-screen video legs weigh roughly 54 MB. This weighs **272 KB of AVIF plus
-34 KB of HTML**, loads instantly on mobile data, and never softens, because compressed video
+of page. Six full-screen video legs weigh roughly 54 MB. This weighs **262 KB of AVIF plus
+40 KB of HTML**, loads instantly on mobile data, and never softens, because compressed video
 scaled across a high-density display is exactly where blur comes from.
 
 The sharpness is arithmetic rather than a promise. Sources are captured at 2x and stored at
