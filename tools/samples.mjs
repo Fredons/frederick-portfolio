@@ -2,8 +2,8 @@ import { createRequire } from "node:module";
 import { mkdir } from "node:fs/promises";
 const require = createRequire(import.meta.url);
 const DESK = "C:/Users/Frederick Akam/Desktop";
-const { chromium } = require(`${DESK}/access-audit/node_modules/playwright`);
-const sharp = require(`${DESK}/strategicbuys-app/node_modules/sharp`);
+const { chromium } = require("./deps.cjs");
+const { sharp } = require("./deps.cjs");
 
 const SITES = [
   { id: "nash",      url: "https://nash-site-nine.vercel.app/" },

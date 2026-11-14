@@ -1,3 +1,5 @@
 _verify
 tools
 *.md
+.impeccable
+shots/*.json

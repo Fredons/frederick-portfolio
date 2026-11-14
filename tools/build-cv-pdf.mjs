@@ -10,7 +10,7 @@ import { createRequire } from "node:module";
 import { writeFileSync } from "node:fs";
 const require = createRequire(import.meta.url);
 const cv = require("./cv-data.js");
-const { chromium } = require("C:/Users/Frederick Akam/Desktop/access-audit/node_modules/playwright");
+const { chromium } = require("./deps.cjs");
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 

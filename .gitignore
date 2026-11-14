@@ -19,3 +19,8 @@ AGENCY-PROGRESS.md
 FOLLOWUPS-3-SEP.md
 LEADS-SEP-2026.md
 APPLICATIONS-8-SEP.md
+
+# Impeccable review captures and build scratch (regenerate with tools/inspect.mjs)
+.impeccable/review/
+.impeccable/build/
+.impeccable/config.local.json

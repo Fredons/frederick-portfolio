@@ -3,8 +3,9 @@
  * at the exact width the hero renders them. Nothing is ever upscaled, so
  * nothing is ever soft.
  *
- * Borrows playwright from access-audit and sharp from strategicbuys-app so
- * this folder stays dependency free.
+ * Borrows playwright and sharp from sibling projects (see deps.cjs) so this
+ * folder stays dependency free. Pass ids to shoot only those:
+ *   node tools/capture.mjs athelia winnie
  */
 
 import { createRequire } from "node:module";
@@ -12,10 +13,8 @@ import { mkdir } from "node:fs/promises";
 import path from "node:path";
 
 const require = createRequire(import.meta.url);
-const DESK = "C:/Users/Frederick Akam/Desktop";
-
-const { chromium } = require(`${DESK}/access-audit/node_modules/playwright`);
-const sharp = require(`${DESK}/strategicbuys-app/node_modules/sharp`);
+const { chromium } = require("./deps.cjs");
+const { sharp } = require("./deps.cjs");
 
 const OUT = path.join(process.cwd(), "shots");
 
@@ -23,15 +22,17 @@ const OUT = path.join(process.cwd(), "shots");
 const RENDER_WIDTH = 1600;
 
 const SITES = [
-  { id: "propinfo",     url: "https://propinfo.com.au/" },
   { id: "proforge",     url: "https://www.proforge.com.au/" },
   { id: "asprey",       url: "https://www.aspreylawyers.com/" },
   { id: "strategic",    url: "https://strategicbuys.com.au/" },
   { id: "nikunj",       url: "https://www.nikunj.com.au/" },
   { id: "iventicks",    url: "https://eventicket-psi.vercel.app/" },
   { id: "nvrgvp",       url: "https://www.nvrgvp.org/" },
-  { id: "propinfodemo", url: "https://demo.propinfo.com.au/" },
+  { id: "athelia",      url: "https://athelia.com.au/" },
+  { id: "winnie",       url: "https://winnie-ecru.vercel.app/" },
 ];
+
+const ONLY = process.argv.slice(2);
 
 async function run() {
   await mkdir(OUT, { recursive: true });
@@ -48,7 +49,7 @@ async function run() {
 
   const results = [];
 
-  for (const site of SITES) {
+  for (const site of SITES.filter((s) => !ONLY.length || ONLY.includes(s.id))) {
     const page = await ctx.newPage();
     try {
       await page.goto(site.url, { waitUntil: "networkidle", timeout: 45000 });

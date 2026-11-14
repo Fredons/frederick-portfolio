@@ -1,6 +1,6 @@
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
-const { chromium } = require("C:/Users/Frederick Akam/Desktop/access-audit/node_modules/playwright");
+const { chromium } = require("./deps.cjs");
 
 const url = process.argv[2];
 const browser = await chromium.launch();

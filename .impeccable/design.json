@@ -1,0 +1,573 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-14T15:05:01+00:00",
+  "title": "Design System: Frederick Akam, Product Engineer",
+  "extensions": {
+    "colorMeta": {
+      "oxide": {
+        "role": "primary",
+        "displayName": "Burnt Oxide",
+        "canonical": "oklch(0.545 0.158 44)",
+        "tonalRamp": [
+          "oklch(0.150 0.158 44)",
+          "oklch(0.264 0.158 44)",
+          "oklch(0.379 0.158 44)",
+          "oklch(0.493 0.158 44)",
+          "oklch(0.607 0.158 44)",
+          "oklch(0.721 0.158 44)",
+          "oklch(0.836 0.158 44)",
+          "oklch(0.950 0.158 44)"
+        ]
+      },
+      "oxide-deep": {
+        "role": "primary",
+        "displayName": "Kiln Oxide",
+        "canonical": "oklch(0.425 0.132 42)",
+        "tonalRamp": [
+          "oklch(0.150 0.132 42)",
+          "oklch(0.264 0.132 42)",
+          "oklch(0.379 0.132 42)",
+          "oklch(0.493 0.132 42)",
+          "oklch(0.607 0.132 42)",
+          "oklch(0.721 0.132 42)",
+          "oklch(0.836 0.132 42)",
+          "oklch(0.950 0.132 42)"
+        ]
+      },
+      "oxide-press": {
+        "role": "primary",
+        "displayName": "Fired Oxide",
+        "canonical": "oklch(0.37 0.12 42)",
+        "tonalRamp": [
+          "oklch(0.150 0.12 42)",
+          "oklch(0.264 0.12 42)",
+          "oklch(0.379 0.12 42)",
+          "oklch(0.493 0.12 42)",
+          "oklch(0.607 0.12 42)",
+          "oklch(0.721 0.12 42)",
+          "oklch(0.836 0.12 42)",
+          "oklch(0.950 0.12 42)"
+        ]
+      },
+      "oxide-lit": {
+        "role": "primary",
+        "displayName": "Ember Oxide",
+        "canonical": "oklch(0.68 0.15 48)",
+        "tonalRamp": [
+          "oklch(0.150 0.15 48)",
+          "oklch(0.264 0.15 48)",
+          "oklch(0.379 0.15 48)",
+          "oklch(0.493 0.15 48)",
+          "oklch(0.607 0.15 48)",
+          "oklch(0.721 0.15 48)",
+          "oklch(0.836 0.15 48)",
+          "oklch(0.950 0.15 48)"
+        ]
+      },
+      "oxide-wash": {
+        "role": "primary",
+        "displayName": "Oxide Wash",
+        "canonical": "oklch(0.935 0.030 66)",
+        "tonalRamp": [
+          "oklch(0.150 0.030 66)",
+          "oklch(0.264 0.030 66)",
+          "oklch(0.379 0.030 66)",
+          "oklch(0.493 0.030 66)",
+          "oklch(0.607 0.030 66)",
+          "oklch(0.721 0.030 66)",
+          "oklch(0.836 0.030 66)",
+          "oklch(0.950 0.030 66)"
+        ]
+      },
+      "bone": {
+        "role": "neutral",
+        "displayName": "Bone",
+        "canonical": "oklch(0.962 0.009 78)",
+        "tonalRamp": [
+          "oklch(0.150 0.009 78)",
+          "oklch(0.264 0.009 78)",
+          "oklch(0.379 0.009 78)",
+          "oklch(0.493 0.009 78)",
+          "oklch(0.607 0.009 78)",
+          "oklch(0.721 0.009 78)",
+          "oklch(0.836 0.009 78)",
+          "oklch(0.950 0.009 78)"
+        ],
+        "engineGroundRamp": [
+          "oklch(0.962 0.009 78)",
+          "oklch(0.962 0.009 78)",
+          "oklch(0.905 0.016 74)",
+          "oklch(0.355 0.018 60)",
+          "oklch(0.285 0.016 62)",
+          "oklch(0.215 0.014 62)"
+        ]
+      },
+      "bone-deep": {
+        "role": "neutral",
+        "displayName": "Deep Bone",
+        "canonical": "oklch(0.935 0.013 76)",
+        "tonalRamp": [
+          "oklch(0.150 0.013 76)",
+          "oklch(0.264 0.013 76)",
+          "oklch(0.379 0.013 76)",
+          "oklch(0.493 0.013 76)",
+          "oklch(0.607 0.013 76)",
+          "oklch(0.721 0.013 76)",
+          "oklch(0.836 0.013 76)",
+          "oklch(0.950 0.013 76)"
+        ]
+      },
+      "sheet-white": {
+        "role": "neutral",
+        "displayName": "Sheet White",
+        "canonical": "oklch(0.995 0.003 80)",
+        "tonalRamp": [
+          "oklch(0.150 0.003 80)",
+          "oklch(0.264 0.003 80)",
+          "oklch(0.379 0.003 80)",
+          "oklch(0.493 0.003 80)",
+          "oklch(0.607 0.003 80)",
+          "oklch(0.721 0.003 80)",
+          "oklch(0.836 0.003 80)",
+          "oklch(0.950 0.003 80)"
+        ]
+      },
+      "ground-figures": {
+        "role": "neutral",
+        "displayName": "Figures Ground",
+        "canonical": "oklch(0.905 0.016 74)",
+        "tonalRamp": [
+          "oklch(0.150 0.016 74)",
+          "oklch(0.264 0.016 74)",
+          "oklch(0.379 0.016 74)",
+          "oklch(0.493 0.016 74)",
+          "oklch(0.607 0.016 74)",
+          "oklch(0.721 0.016 74)",
+          "oklch(0.836 0.016 74)",
+          "oklch(0.950 0.016 74)"
+        ]
+      },
+      "ground-risk": {
+        "role": "neutral",
+        "displayName": "Risk Ground",
+        "canonical": "oklch(0.355 0.018 60)",
+        "tonalRamp": [
+          "oklch(0.150 0.018 60)",
+          "oklch(0.264 0.018 60)",
+          "oklch(0.379 0.018 60)",
+          "oklch(0.493 0.018 60)",
+          "oklch(0.607 0.018 60)",
+          "oklch(0.721 0.018 60)",
+          "oklch(0.836 0.018 60)",
+          "oklch(0.950 0.018 60)"
+        ]
+      },
+      "ground-parcel": {
+        "role": "neutral",
+        "displayName": "Parcel Ground",
+        "canonical": "oklch(0.285 0.016 62)",
+        "tonalRamp": [
+          "oklch(0.150 0.016 62)",
+          "oklch(0.264 0.016 62)",
+          "oklch(0.379 0.016 62)",
+          "oklch(0.493 0.016 62)",
+          "oklch(0.607 0.016 62)",
+          "oklch(0.721 0.016 62)",
+          "oklch(0.836 0.016 62)",
+          "oklch(0.950 0.016 62)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(0.215 0.014 62)",
+        "tonalRamp": [
+          "oklch(0.150 0.014 62)",
+          "oklch(0.264 0.014 62)",
+          "oklch(0.379 0.014 62)",
+          "oklch(0.493 0.014 62)",
+          "oklch(0.607 0.014 62)",
+          "oklch(0.721 0.014 62)",
+          "oklch(0.836 0.014 62)",
+          "oklch(0.950 0.014 62)"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "oklch(0.435 0.016 62)",
+        "tonalRamp": [
+          "oklch(0.150 0.016 62)",
+          "oklch(0.264 0.016 62)",
+          "oklch(0.379 0.016 62)",
+          "oklch(0.493 0.016 62)",
+          "oklch(0.607 0.016 62)",
+          "oklch(0.721 0.016 62)",
+          "oklch(0.836 0.016 62)",
+          "oklch(0.950 0.016 62)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "canonical": "oklch(0.855 0.014 74)",
+        "tonalRamp": [
+          "oklch(0.150 0.014 74)",
+          "oklch(0.264 0.014 74)",
+          "oklch(0.379 0.014 74)",
+          "oklch(0.493 0.014 74)",
+          "oklch(0.607 0.014 74)",
+          "oklch(0.721 0.014 74)",
+          "oklch(0.836 0.014 74)",
+          "oklch(0.950 0.014 74)"
+        ]
+      },
+      "rule-dark": {
+        "role": "neutral",
+        "displayName": "Dark Rule",
+        "canonical": "oklch(0.42 0.016 62)",
+        "tonalRamp": [
+          "oklch(0.150 0.016 62)",
+          "oklch(0.264 0.016 62)",
+          "oklch(0.379 0.016 62)",
+          "oklch(0.493 0.016 62)",
+          "oklch(0.607 0.016 62)",
+          "oklch(0.721 0.016 62)",
+          "oklch(0.836 0.016 62)",
+          "oklch(0.950 0.016 62)"
+        ]
+      },
+      "on-dark": {
+        "role": "neutral",
+        "displayName": "Paper Light",
+        "canonical": "oklch(0.955 0.010 78)",
+        "tonalRamp": [
+          "oklch(0.150 0.010 78)",
+          "oklch(0.264 0.010 78)",
+          "oklch(0.379 0.010 78)",
+          "oklch(0.493 0.010 78)",
+          "oklch(0.607 0.010 78)",
+          "oklch(0.721 0.010 78)",
+          "oklch(0.836 0.010 78)",
+          "oklch(0.950 0.010 78)"
+        ]
+      },
+      "on-dark-soft": {
+        "role": "neutral",
+        "displayName": "Soft Paper Light",
+        "canonical": "oklch(0.80 0.014 72)",
+        "tonalRamp": [
+          "oklch(0.150 0.014 72)",
+          "oklch(0.264 0.014 72)",
+          "oklch(0.379 0.014 72)",
+          "oklch(0.493 0.014 72)",
+          "oklch(0.607 0.014 72)",
+          "oklch(0.721 0.014 72)",
+          "oklch(0.836 0.014 72)",
+          "oklch(0.950 0.014 72)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name in the first viewport; the closing question at one notch down."
+      },
+      "statement": {
+        "displayName": "Statement",
+        "purpose": "The risk sentence alone, on a dark ground."
+      },
+      "section": {
+        "displayName": "Section",
+        "purpose": "Section heads after the engine, followed by a hairline to the right edge."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Engine layer headings, one per frame."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project names in the ledger."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Engine paragraphs at a 38ch measure."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Ledger detail in soft ink at a 62ch measure."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Email me button text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Gauge and spec labels, uppercase mono."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Source captions, dates, footer."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "The records total; all numbers are mono with tabular figures."
+      }
+    },
+    "shadows": [
+      {
+        "name": "button",
+        "value": "0 1px 2px oklch(0.2 0.01 60 / .25), 0 8px 18px -10px oklch(0.2 0.01 60 / .45)",
+        "purpose": "Pinned Email me button at rest."
+      },
+      {
+        "name": "button-hover",
+        "value": "0 1px 2px oklch(0.2 0.01 60 / .25), 0 12px 24px -12px oklch(0.2 0.01 60 / .55)",
+        "purpose": "Pinned Email me button on hover."
+      },
+      {
+        "name": "button-ask",
+        "value": "0 1px 2px oklch(0 0 0 / .35), 0 10px 22px -12px oklch(0 0 0 / .6)",
+        "purpose": "Closing Email me button on the ink band."
+      },
+      {
+        "name": "sheet",
+        "value": "0 1px 2px oklch(0.1 0.01 60 / .25), 0 24px 44px -26px oklch(0.05 0.01 60 / .7)",
+        "purpose": "The drawn data sheet resting on a dark ground."
+      },
+      {
+        "name": "shot",
+        "value": "0 1px 2px oklch(0.3 0.02 60 / .14), 0 18px 34px -20px oklch(0.3 0.02 60 / .45)",
+        "purpose": "Ledger screenshots at rest."
+      },
+      {
+        "name": "shot-hover",
+        "value": "0 2px 4px oklch(0.3 0.02 60 / .16), 0 26px 44px -22px oklch(0.3 0.02 60 / .55)",
+        "purpose": "Ledger screenshots on hover, with a 3px rise."
+      },
+      {
+        "name": "bar-glass",
+        "value": "background: color-mix(in oklch, var(--bone) 90%, transparent); backdrop-filter: blur(12px) saturate(1.2); border-bottom: 1px solid var(--rule)",
+        "purpose": "The bar once the reader is past the engine. Not a shadow; recorded here as the bar's only depth treatment."
+      }
+    ],
+    "motion": [
+      {
+        "name": "exp",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "State transitions that move or scale: bar name 0.45s, button press 0.25s, gauge tick 0.4s, screenshot lift 0.5s."
+      },
+      {
+        "name": "colour",
+        "value": "0.2s to 0.35s, default ease",
+        "purpose": "Colour, underline and background changes on links, buttons, gauge labels and the bar."
+      },
+      {
+        "name": "scroll-map",
+        "value": "smoothstep t*t*(3-2t)",
+        "purpose": "Maps scroll progress to sheet lift, copy crossfade and ground tone, after a 0.3 dwell per unit."
+      },
+      {
+        "name": "engine-unit",
+        "value": "100svh per state; engine 640svh; sticky stage 100svh",
+        "purpose": "One scroll unit per layer, plus the opening frame and a 0.4 unit hold."
+      },
+      {
+        "name": "sheet-lift",
+        "value": "translateY(-108vh) rotate(-5deg), fade over the last 30%",
+        "purpose": "How a sheet leaves the pile."
+      },
+      {
+        "name": "pile-depth",
+        "value": "16px lower and 4% smaller per sheet, max 3 visible; resting tilt 1.6, -1.2, 1 deg",
+        "purpose": "Depth by position in the engine."
+      },
+      {
+        "name": "copy-handover",
+        "value": "opacity crossfade with 18px drift",
+        "purpose": "Engine copy hands over as the top sheet clears."
+      },
+      {
+        "name": "count-up",
+        "value": "1500ms, 1 - 2^(-10t), once",
+        "purpose": "The records total runs 0 to 5,880,000 on reaching DATA."
+      },
+      {
+        "name": "lenis",
+        "value": "lerp 0.1, touch native, scrollTo 1.4s",
+        "purpose": "Smooth wheel scroll; never created under reduced motion."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transitions 0.01ms, no Lenis, engine not pinned",
+        "purpose": "Stacked fallback with every layer readable."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "entry-two-col",
+        "value": "760px"
+      },
+      {
+        "name": "ledger-two-col",
+        "value": "900px"
+      },
+      {
+        "name": "engine-desktop",
+        "value": "1024px"
+      },
+      {
+        "name": "entry-three-col",
+        "value": "1180px"
+      },
+      {
+        "name": "engine-min-height",
+        "value": "560px (height)"
+      },
+      {
+        "name": "engine-compact-height",
+        "value": "720px (max-height, below 1024px wide)"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Email me (bar)",
+      "kind": "button",
+      "refersTo": "button-mail",
+      "description": "The one action, pinned top right on every screen.",
+      "html": "<a class=\"ds-btn-mail\" href=\"#\"><svg viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><rect x=\"2.5\" y=\"4.5\" width=\"15\" height=\"11\" rx=\"2\"/><path d=\"m3.5 6 6.5 5 6.5-5\"/></svg>Email me</a>",
+      "css": ".ds-btn-mail{display:inline-flex;align-items:center;gap:.55rem;min-height:44px;padding:0 1.15rem;border-radius:999px;background:var(--oxide-deep);color:var(--on-dark);font:600 .9375rem/1 var(--sans);letter-spacing:.005em;text-decoration:none;white-space:nowrap;box-shadow:0 1px 2px oklch(0.2 0.01 60 / .25),0 8px 18px -10px oklch(0.2 0.01 60 / .45);transition:background-color .2s,transform .25s cubic-bezier(0.16,1,0.3,1),box-shadow .25s cubic-bezier(0.16,1,0.3,1)} .ds-btn-mail svg{width:1.05em;height:1.05em;flex:none} .ds-btn-mail:hover{background:var(--oxide-press);box-shadow:0 1px 2px oklch(0.2 0.01 60 / .25),0 12px 24px -12px oklch(0.2 0.01 60 / .55)} .ds-btn-mail:active{transform:translateY(1px)} .ds-btn-mail:focus-visible{outline:2px solid var(--oxide-deep);outline-offset:3px}"
+    },
+    {
+      "name": "Email me (ask)",
+      "kind": "button",
+      "refersTo": "button-mail-ask",
+      "description": "The closing call to action on the ink band, beside the CV link.",
+      "html": "<div class=\"ds-ask\"><a class=\"ds-btn-ask\" href=\"#\"><svg viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><rect x=\"2.5\" y=\"4.5\" width=\"15\" height=\"11\" rx=\"2\"/><path d=\"m3.5 6 6.5 5 6.5-5\"/></svg>Email me</a><a class=\"ds-ask-cv\" href=\"#\"><svg viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><path d=\"M10 3v9.5M6 9l4 4 4-4M4 16.5h12\"/></svg>CV, PDF</a></div>",
+      "css": ".ds-ask{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.75rem;padding:2rem;background:var(--ink);color:var(--on-dark);font-family:var(--sans)} .ds-btn-ask{display:inline-flex;align-items:center;gap:.55rem;min-height:56px;padding:0 1.6rem;border-radius:999px;background:var(--oxide-lit);color:var(--ink);font:600 1.0625rem/1 var(--sans);text-decoration:none;box-shadow:0 1px 2px oklch(0 0 0 / .35),0 10px 22px -12px oklch(0 0 0 / .6);transition:background-color .2s,transform .25s cubic-bezier(0.16,1,0.3,1)} .ds-btn-ask svg,.ds-ask-cv svg{width:1.05em;height:1.05em;flex:none} .ds-btn-ask:hover{background:oklch(0.74 0.14 52)} .ds-btn-ask:active{transform:translateY(1px)} .ds-btn-ask:focus-visible,.ds-ask-cv:focus-visible{outline:2px solid var(--oxide-lit);outline-offset:3px} .ds-ask-cv{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;font-weight:500;color:var(--on-dark);text-underline-offset:.22em;text-decoration-color:color-mix(in oklch,currentColor 38%,transparent)} .ds-ask-cv:hover{text-decoration-color:currentColor}"
+    },
+    {
+      "name": "Gauge",
+      "kind": "nav",
+      "refersTo": "gauge-label",
+      "description": "The five-tick depth instrument on the engine's left edge; the lit tick is the current layer.",
+      "html": "<nav class=\"ds-gauge\" aria-label=\"Layers\"><ol><li><button type=\"button\"><span class=\"ds-tick\"></span>Report</button></li><li><button type=\"button\" aria-current=\"step\"><span class=\"ds-tick\"></span>Figures</button></li><li><button type=\"button\"><span class=\"ds-tick\"></span>Risk</button></li><li><button type=\"button\"><span class=\"ds-tick\"></span>Parcel</button></li><li><button type=\"button\"><span class=\"ds-tick\"></span>Data</button></li></ol></nav>",
+      "css": ".ds-gauge{padding:1.5rem;background:var(--bone);color:var(--ink)} .ds-gauge ol{position:relative;list-style:none;margin:0;padding:0;display:grid;gap:.125rem} .ds-gauge ol::before{content:\"\";position:absolute;left:5.5px;top:22px;bottom:22px;width:1px;background:currentColor;opacity:.28} .ds-gauge button{appearance:none;border:0;background:none;color:var(--ink-soft);cursor:pointer;display:flex;align-items:center;gap:.85rem;min-height:44px;padding:0 .25rem 0 0;font:500 .75rem/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;transition:color .3s} .ds-gauge button:hover,.ds-gauge button[aria-current=step]{color:var(--ink)} .ds-gauge button:focus-visible{outline:2px solid var(--oxide-deep);outline-offset:3px;border-radius:3px} .ds-tick{position:relative;width:12px;height:12px;border-radius:50%;flex:none;border:1px solid currentColor;background:var(--bone);transition:background-color .3s,border-color .3s,transform .4s cubic-bezier(0.16,1,0.3,1)} .ds-gauge button[aria-current=step] .ds-tick{background:var(--oxide);border-color:var(--oxide);transform:scale(1.25)}"
+    },
+    {
+      "name": "Data sheet",
+      "kind": "custom",
+      "refersTo": "data-sheet",
+      "description": "A ledger drawn in HTML: label and mono figure per row, proportion bars, a double-ruled total.",
+      "html": "<div class=\"ds-slab-wrap\"><div class=\"ds-slab\"><p class=\"ds-slab-cap\"><span>Loaded into PostGIS</span><span>records</span></p><ul class=\"ds-slab-rows\"><li><span>G-NAF geocoded addresses</span><span class=\"ds-num\">5,100,000</span><span class=\"ds-track\"><span style=\"width:100%\"></span></span></li><li><span>VIC crime records</span><span class=\"ds-num\">447,794</span><span class=\"ds-track\"><span style=\"width:8.78%\"></span></span></li><li><span>NSW property sales</span><span class=\"ds-num\">239,895</span><span class=\"ds-track\"><span style=\"width:4.7%\"></span></span></li></ul><div class=\"ds-slab-total\"><span>Total</span><span class=\"ds-num\">5,880,000</span></div></div></div>",
+      "css": ".ds-slab-wrap{padding:2rem;background:var(--ink)} .ds-slab{width:min(100%,36rem);margin-inline:auto;padding:clamp(1.25rem,3vw,2rem);border-radius:18px;background:oklch(0.995 0.003 80);color:var(--ink);font-family:var(--sans);box-shadow:0 1px 2px oklch(0.1 0.01 60 / .25),0 24px 44px -26px oklch(0.05 0.01 60 / .7)} .ds-slab-cap{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin:0 0 .35rem;padding-bottom:.6rem;border-bottom:1px solid var(--ink);font-size:.875rem;font-weight:500} .ds-slab-cap span:last-child{font-weight:400;color:var(--ink-soft)} .ds-slab-rows{list-style:none;margin:0;padding:0} .ds-slab-rows li{display:grid;grid-template-columns:1fr auto;gap:.35rem 1rem;padding:.8rem 0;border-bottom:1px solid var(--rule);font-size:.9375rem} .ds-num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right} .ds-track{grid-column:1 / -1;height:4px;border-radius:2px;background:oklch(0.935 0.008 78);overflow:hidden} .ds-track span{display:block;height:100%;min-width:3px;border-radius:2px;background:var(--ink-soft)} .ds-slab-total{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding-top:.8rem;border-top:3px double var(--ink);margin-top:-1px} .ds-slab-total>span:first-child{font-weight:500} .ds-slab-total .ds-num{font-size:clamp(1.5rem,1.1rem + 1.6vw,2.25rem);font-weight:500;letter-spacing:-.01em;line-height:1}"
+    },
+    {
+      "name": "Ledger entry",
+      "kind": "card",
+      "refersTo": "entry-shot",
+      "description": "A project row: hairline on top, a lifted screenshot, serif title, one-line what, detail, spec list and mono URL. Not a card.",
+      "html": "<article class=\"ds-entry\"><a class=\"ds-shot\" href=\"#\" aria-hidden=\"true\" tabindex=\"-1\"></a><div><h3 class=\"ds-entry-title\"><a href=\"#\">ProForge</a></h3><p class=\"ds-what\">An AI receptionist for Australian trades.</p><p class=\"ds-detail\">Picks up in an Australian voice at any hour, books the job, texts a confirmation.</p></div><div><dl class=\"ds-specs\"><dt>Stack</dt><dd>Next.js, TypeScript, Supabase</dd><dt>Role</dt><dd>Sole developer, end to end</dd></dl><a class=\"ds-url\" href=\"#\">proforge.com.au</a></div></article>",
+      "css": ".ds-entry{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:1.25rem 2.5rem;padding:clamp(1.75rem,3vw,2.5rem) 0;border-top:1px solid var(--rule);background:var(--bone);color:var(--ink);font:400 1.0625rem/1.6 var(--sans)} .ds-entry>div:last-child{grid-column:2} .ds-shot{grid-row:span 2;display:block;border-radius:8px;aspect-ratio:16 / 10;background:var(--bone-deep);box-shadow:0 1px 2px oklch(0.3 0.02 60 / .14),0 18px 34px -20px oklch(0.3 0.02 60 / .45);transition:transform .5s cubic-bezier(0.16,1,0.3,1),box-shadow .5s cubic-bezier(0.16,1,0.3,1)} .ds-shot:hover{transform:translateY(-3px);box-shadow:0 2px 4px oklch(0.3 0.02 60 / .16),0 26px 44px -22px oklch(0.3 0.02 60 / .55)} .ds-entry-title{margin:0;font:400 clamp(1.5rem,1.2rem + 1vw,2.125rem)/1.08 var(--serif);letter-spacing:-.02em;font-variation-settings:\"opsz\" 48} .ds-entry-title a{color:inherit;text-decoration:none} .ds-entry-title a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.22em} .ds-what{margin:.45rem 0 .8rem;font-weight:500} .ds-detail{margin:0;color:var(--ink-soft);max-width:62ch} .ds-specs{display:grid;grid-template-columns:max-content 1fr;gap:.45rem 1.25rem;margin:0 0 1rem;font-size:.9375rem;line-height:1.5} .ds-specs dt{font:500 .75rem/1.95 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft)} .ds-specs dd{margin:0} .ds-url{font:500 .875rem/1.5 var(--mono);color:var(--ink);text-underline-offset:.22em;text-decoration-color:color-mix(in oklch,var(--ink) 35%,transparent);transition:text-decoration-color .2s} .ds-url:hover{text-decoration-color:var(--ink)} .ds-url:focus-visible,.ds-entry-title a:focus-visible{outline:2px solid var(--oxide-deep);outline-offset:3px;border-radius:3px}"
+    },
+    {
+      "name": "Spec list",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Two-column definition list: uppercase mono labels against sans values.",
+      "html": "<dl class=\"ds-speclist\"><dt>Stack</dt><dd>Next.js, TypeScript, Prisma, Postgres, PostGIS, Python</dd><dt>Role</dt><dd>Sole developer, end to end</dd><dt>Live</dt><dd><a href=\"#\">propinfo.com.au</a></dd></dl>",
+      "css": ".ds-speclist{display:grid;grid-template-columns:max-content 1fr;gap:.45rem 1.25rem;margin:0;padding:1.5rem;background:var(--bone);color:var(--ink);font:400 .9375rem/1.5 var(--sans)} .ds-speclist dt{font:500 .75rem/1.95 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft)} .ds-speclist dd{margin:0} .ds-speclist a{font:500 .875rem/1.5 var(--mono);color:var(--ink);text-underline-offset:.22em;text-decoration-color:color-mix(in oklch,var(--ink) 35%,transparent)} .ds-speclist a:hover{text-decoration-color:var(--ink)} .ds-speclist a:focus-visible{outline:2px solid var(--oxide-deep);outline-offset:3px;border-radius:3px}"
+    },
+    {
+      "name": "Mark chip",
+      "kind": "chip",
+      "refersTo": "chip-mark",
+      "description": "A quiet pill that flags client work. Static, no interactive state.",
+      "html": "<span class=\"ds-mark\">Client work</span>",
+      "css": ".ds-mark{display:inline-block;padding:.2rem .6rem;border-radius:999px;border:1px solid var(--rule);background:var(--bone-deep);color:var(--ink-soft);font:500 .8125rem/1.3 var(--sans)}"
+    },
+    {
+      "name": "Section head",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "A serif section heading with a hairline running to the right edge.",
+      "html": "<div class=\"ds-band\"><h2>Eight more, all live</h2></div>",
+      "css": ".ds-band{display:flex;align-items:baseline;gap:1.5rem;padding:1.5rem;background:var(--bone);color:var(--ink)} .ds-band h2{margin:0;font:400 clamp(2rem,1.3rem + 2.6vw,3.5rem)/1.02 var(--serif);letter-spacing:-.025em;font-variation-settings:\"opsz\" 60} .ds-band::after{content:\"\";flex:1;height:1px;background:var(--rule);transform:translateY(-.35em)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Drawing Pile",
+    "overview": "The page is a desk with one job's drawings stacked on it. The ground is warm bone paper, the type is ink, and the product sheets are whiter than the desk so they read as paper resting on paper. Scrolling down is digging down: after the opening frame, each 100svh lifts the top sheet off the pile and the ground underneath falls one step toward ink, so depth reads twice, as position in the pile and as tone in the ground. The register is exact, calm and checkable: every claim sits next to a capture, a number or a URL.\n\nDensity changes on purpose. The pinned engine is sparse, one heading, one paragraph and one sheet per frame, with a five-tick gauge on the edge so the reader always knows how deep they are. Everything after the engine is a dense ledger on bone: hairline-ruled rows, mono spec lists, live URLs, and a closing ask on ink. The system prefers a rule to a box, a measured number to an adjective, and a real capture to an illustration.\n\nConfirmed rejections: the project-card grid, the 3D-corridor showreel the previous page used, generated imagery of any kind, and a second accent colour.",
+    "keyCharacteristics": [
+      "Warm OKLCH neutrals (hue 60 to 80) running from bone to ink, with one burnt-oxide accent.",
+      "Three type voices with fixed jobs: Newsreader for names and claims, IBM Plex Sans for explanation, IBM Plex Mono for anything measured.",
+      "A pinned five-layer engine with a lit gauge, a falling ground and a sheet pile that lifts one sheet per scroll unit.",
+      "Ledger rows separated by hairlines instead of cards.",
+      "Soft, warm, downward paper shadows; radius only on pills, sheets and screenshots.",
+      "Real captures only, each captioned with its source; data drawn in HTML."
+    ],
+    "rules": [
+      {
+        "name": "The Two Targets Rule",
+        "body": "Oxide marks the lit gauge tick and the Email me button, and nothing else. Its only other appearances are states: the focus ring, the caret and text selection. A decorative third use breaks the system.",
+        "section": "colors"
+      },
+      {
+        "name": "The Falling Ground Rule",
+        "body": "Through the engine the ground's lightness only falls: bone, bone, figures, risk, parcel, ink, interpolated in OKLCH as each sheet lifts. Never lighten mid-dig. When the engine ends the page cuts back to bone in one step, and only the closing ask returns to ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Partner Tone Rule",
+        "body": "Every tone that sits on the ground has a dark partner, and the swap happens when ground lightness drops below 0.62: oxide to oxide-lit, ink-soft to on-dark-soft, rule to rule-dark, ink to on-dark.",
+        "section": "colors"
+      },
+      {
+        "name": "The Measured Mono Rule",
+        "body": "IBM Plex Mono with tabular figures carries everything measured or labelled: numbers, URLs, dates, gauge and spec labels, source captions, status lines and the scroll cue. A sentence of argument is never set in mono.",
+        "section": "typography"
+      },
+      {
+        "name": "The Light Serif Rule",
+        "body": "Newsreader stays at weight 350 to 400 with negative tracking (-0.012em to -0.035em) and an optical size matched to its size (48 to 72). The serif is never bold; emphasis comes from size and from the frame it is given.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Frame Rule",
+        "body": "In the engine one frame holds one heading, one paragraph and one sheet. Copy crossfades with an 18px drift as the top sheet clears, so a heading is always on screen and two layers' copy never share it.",
+        "section": "layout"
+      },
+      {
+        "name": "The Paper Shadow Rule",
+        "body": "Every shadow is a pair: a 1 to 2px contact line plus a long, soft, negative-spread drop, tinted warm (hue 60) on bone. Only the ask button, on ink, uses neutral black. No hard offsets, no glows, no text shadows.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Pile Rule",
+        "body": "In the engine, depth is position. Each sheet under the top one sits 16px lower and 4% smaller with its own resting tilt (1.6, -1.2 and 1 degrees), and at most three show beneath. A sheet leaves by rising 108% of the viewport while turning -5 degrees, fading over the last 30% of its lift.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep oxide to the lit gauge tick and the Email me button, and borrow it only for the focus ring, caret and selection.",
+      "Do set every number, URL, date and label in IBM Plex Mono with tabular figures.",
+      "Do swap to the partner tone (oxide-lit, on-dark-soft, rule-dark, on-dark) whenever ground lightness drops below 0.62.",
+      "Do use real captures (AVIF with a WebP fallback, at 2x) for product imagery, caption each with where it was captured, and draw data in HTML or SVG.",
+      "Do separate rows with 1px hairlines, open a group with a 1px ink rule, and close a total with a 3px double ink rule.",
+      "Do drive scroll motion with transform, opacity, filter and the one stage colour only, from a single rAF loop on scrollY, and use the exp curve (cubic-bezier(0.16, 1, 0.3, 1)) for state transitions.",
+      "Do keep every interactive target at least 44px tall.",
+      "Do give reduced motion and screens under 560px tall the stacked fallback: every layer in order, each band in its own ground tone."
+    ],
+    "donts": [
+      "Don't add a second accent colour or use oxide as decoration on borders, icons, headings or backgrounds.",
+      "Don't lighten the ground while digging down; the only lightening is the single cut back to bone after the engine.",
+      "Don't box projects in cards or tile them in a grid; in a ledger row the screenshot is the only object with radius and shadow.",
+      "Don't use generated or AI imagery anywhere; if it cannot be captured, draw it in HTML.",
+      "Don't set Newsreader bold or set prose in mono.",
+      "Don't use hard offset shadows, glows or text shadows.",
+      "Don't put an eyebrow or kicker above a heading; labels belong to the gauge, the spec lists and the captions.",
+      "Don't round rows, bands or sections; radius belongs to pills (999px), sheets (18px) and screenshots (8px)."
+    ]
+  }
+}

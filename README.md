@@ -4,47 +4,57 @@
 
 A single-page portfolio for Frederick Akam. One static HTML file, no framework, no build step.
 
-The hero is a corridor of live production sites in 3D space that you fly through on scroll.
-Eight projects arrive out of the distance, grow, and sweep past the camera, then the page
-resolves into a dense index of the work. Every site in the corridor is a real shipped system with a
-URL you can open.
+Written for founders and engineering leads hiring a product engineer. Instead of a grid of
+project cards, the page takes one real system apart: scrolling down is digging down through
+PropInfo, from the report a client reads, to the figures, the risk rule, the parcel, and the
+5.88 million records underneath. Each scroll step lifts the top sheet off a pile while the
+ground darkens one step. Eight more live systems follow as a dense index, then the record and
+one action: email.
+
+The brief it was built against is `portfolio-brief_v1_review.md` (14 Nov 2026), which replaced
+the earlier PRODUCT.md written for Mindrift reviewers.
 
 ## Why it is built this way
 
-The alternative was a scroll-scrubbed video hero, which is the usual answer for this kind
-of page. Six full-screen video legs weigh roughly 54 MB. This weighs **262 KB of AVIF plus
-40 KB of HTML**, loads instantly on mobile data, and never softens, because compressed video
-scaled across a high-density display is exactly where blur comes from.
+Every engine sheet is a real capture of propinfo.com.au's own sample property (12 Quandong St,
+Paddington), with its background stripped so it sits on whatever ground the engine has reached.
+No generated imagery and no client data. The data layer is drawn in HTML from the pipeline's
+load counts.
 
-The sharpness is arithmetic rather than a promise. Sources are captured at 2x and stored at
-1600px wide. Plates render at 336px. The perspective cutoff sits at `z = 900`, where the
-scale factor is 4.6, putting a plate at 1325px on screen. That is still under the 1600px
-source, so no image is ever upscaled at any point in the flight.
+It stays one static file: about 515 KB of HTML, Lenis and AVIF in total, so it opens on mobile
+data. Motion is one rAF loop writing transform, opacity and one background colour. Readers who
+prefer reduced motion, and screens shorter than 560px, get the same layers stacked as a plain
+page with no pinning and no smooth scroll.
 
 ## Structure
 
 ```
-index.html            the whole page, inline CSS and JS
-shots/                AVIF and WebP captures of each live site, 1600px wide
-tools/capture.mjs     re-shoot every site at 2x and re-encode
-tools/verify.mjs      four viewports, checks horizontal overflow and console errors
-tools/flight.mjs      contact sheet of the corridor sampled across the scroll
-tools/overflow.mjs    finds the exact element causing horizontal overflow on a URL
-tools/anchors.mjs     checks whether anchor jumps land under a fixed header
-CV-Frederick-Akam.md  CV, kept in step with the page
-PRODUCT.md            the brief this was designed against
+index.html                  the whole page, inline CSS and JS
+vendor/lenis-1.3.26.min.js  smooth scroll, self-hosted (MIT)
+shots/engine-*.avif|webp    the four PropInfo layers, with alpha
+shots/*.avif|webp           captures of each live site, 1600px wide
+tools/capture-engine.mjs    re-shoot the PropInfo layers from propinfo.com.au
+tools/capture.mjs           re-shoot the sites (pass ids to shoot only some)
+tools/inspect.mjs           every engine state at 1440 and 390, the rest of the page, the
+                            reduced-motion fallback, plus console, network, image and overflow checks
+tools/verify.mjs            four viewports, checks horizontal overflow and console errors
+tools/overflow.mjs          finds the exact element causing horizontal overflow on a URL
+tools/anchors.mjs           checks whether anchor jumps land under a fixed header
+tools/deps.cjs              where Playwright and sharp are borrowed from
+CV-Frederick-Akam.md        CV, kept in step with the page
 ```
 
-The tooling borrows Playwright and sharp from sibling projects on disk, so this folder has
-no dependencies of its own and nothing to install.
+The tooling borrows Playwright and sharp from sibling projects on disk (the list is in
+`tools/deps.cjs`), so this folder has no dependencies of its own and nothing to install.
 
 ## Working on it
 
 ```bash
 python -m http.server 8899        # serve
 node tools/capture.mjs            # re-shoot the sites after any of them change
+node tools/capture-engine.mjs     # re-shoot the PropInfo layers
+node tools/inspect.mjs            # every engine state plus checks, into .impeccable/review/
 node tools/verify.mjs             # 1920 / 1440 / 768 / 390, expects zero overflow
-node tools/flight.mjs             # visual check of the corridor
 ```
 
 `tools/overflow.mjs` and `tools/anchors.mjs` take a URL and work on any site, not just this
@@ -52,8 +62,9 @@ one. They exist because both defects are invisible until you measure for them.
 
 ## Accessibility and motion
 
-Reduced-motion users get the composed page with no corridor at all, not a degraded version
-of it. Every plate has real alt text. The page is server-rendered markup with no framework,
+Reduced-motion users get every layer as a composed, stacked page, not a degraded version of
+the engine. Every capture has real alt text, and the gauge is a list of real buttons that
+jump to each layer. The page is server-rendered markup with no framework,
 so all content exists before any JavaScript runs.
 
 ## Deploy
@@ -62,7 +73,8 @@ so all content exists before any JavaScript runs.
 npx vercel --prod
 ```
 
-`.vercelignore` keeps the verification screenshots and the tooling out of the deployment.
+`.vercelignore` keeps the verification screenshots, the tooling, the briefs and `.impeccable/`
+out of the deployment.
 
 ## CV
 

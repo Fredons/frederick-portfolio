@@ -1,6 +1,6 @@
 # Frederick Akam
 
-**AI Automation Specialist  |  Full-Stack Web Developer**
+**Product Engineer**
 
 Kaduna, Nigeria (UTC+1)  |  Remote, worldwide
 
@@ -12,7 +12,7 @@ frederickakam.vercel.app  |  github.com/Fredons
 
 ## Professional Summary
 
-Software engineer with ten years of professional experience, the last four building 0-to-1 production platforms end to end as the sole developer: schema, backend, AI layer, interface, deployment and the operational tooling around them. Eight systems are live and publicly checkable. I put large language models inside production systems rather than beside them. PropInfo generates pre-purchase property assessments with the OpenAI API and reconciles them against deterministic financial modelling; ProForge answers a trade business's phone with voice AI, qualifies the caller and books the job. All of it delivered asynchronously from UTC+1 for Australian businesses across property, legal, motorsport and trades.
+Software engineer with ten years of professional experience, the last four building 0-to-1 production platforms end to end as the sole developer: schema, backend, AI layer, interface, deployment and the operational tooling around them. Nine systems are live and publicly checkable. I put large language models inside production systems rather than beside them. PropInfo uses the OpenAI API for document analysis, listing descriptions and portfolio insights, next to deterministic financial modelling; ProForge answers a trade business's phone with voice AI, qualifies the caller and books the job. All of it delivered asynchronously from UTC+1 for businesses in Australia and Nigeria across property, legal, motorsport, trade advisory, fashion retail and trades.
 
 ---
 
@@ -38,8 +38,8 @@ Software engineer with ten years of professional experience, the last four build
 
 **Independent Software Engineer** · Kaduna, Nigeria (Remote) · 2024 – Present
 
-- Build and ship production web platforms end to end for Australian businesses: database schema, backend, API, AI layer, interface, deployment and the operational tooling around them.
-- Built PropInfo, a multi-tenant SaaS platform that collapses a buyer's agent's twenty-tab research workflow into one system. The OpenAI API generates pre-purchase property assessments against comparable sales retrieved and ranked from the property store, reconciled against deterministic modelling: state-specific stamp duty and lenders mortgage insurance, thirty-year yield, cash flow and depreciation projections.
+- Build and ship production web platforms end to end for businesses in Australia and Nigeria: database schema, backend, API, AI layer, interface, deployment and the operational tooling around them.
+- Built PropInfo, a multi-tenant SaaS platform that collapses a buyer's agent's twenty-tab research workflow into one system: white-label property reports with flood and bushfire risk graded to the individual lot, comparable sales, and deterministic modelling of state-specific stamp duty, lenders mortgage insurance, and thirty-year yield, cash flow and depreciation. The OpenAI API handles document analysis, listing descriptions and portfolio insights.
 - Designed the PropInfo data model and access layer: CRM pipeline from first enquiry to settlement, live portfolio valuation, and role-based access control across shared multi-agent workspaces.
 - Built PropInfo's data layer for an investor-focused direction of the product: a Python ETL pipeline into PostGIS loading 5.88 million records. 5.1 million geocoded G-NAF addresses, 239,895 NSW property sales, 447,794 VIC crime records, 63,673 Census 2021 records by postcode, postal boundaries for map overlays, and RBA cash rate history feeding the investment calculator.
 - Built ProForge, an AI receptionist that recovers revenue trade businesses lose to unanswered calls. Voice AI answers around the clock, qualifies the caller, books the job into the calendar, sends SMS confirmation, follows up quotes and escalates genuine emergencies to the operator. Twilio carries the numbers and telephony, Vapi handles the speech layer. Sole developer across voice, automation, backend, marketing site and a separate operator dashboard with its own billing and provisioning.
@@ -65,13 +65,19 @@ Software engineer with ten years of professional experience, the last four build
 ## Selected Projects (all publicly live)
 
 **PropInfo** · propinfo.com.au
-Multi-tenant SaaS for Australian buyer's agents. OpenAI API property assessments grounded in comparable sales retrieved and ranked from the property store, reconciled against deterministic financial modelling, CRM, RBAC, and a PostGIS data layer of 5.88M records loaded by a Python ETL pipeline. Next.js, TypeScript, Supabase, Postgres, PostGIS.
+Multi-tenant SaaS for Australian buyer's agents. White-label reports with lot-level flood and bushfire risk, comparable sales and deterministic financial modelling; OpenAI API for document analysis, listing descriptions and portfolio insights; CRM, RBAC, and a PostGIS data layer of 5.88M records loaded by a Python ETL pipeline. Next.js, TypeScript, Prisma, Postgres, PostGIS.
 
 **ProForge** · proforge.com.au
 AI phone receptionist for trade businesses. Twilio telephony, Vapi voice layer, calendar booking, SMS, quote follow-up. Next.js, TypeScript, Supabase, n8n.
 
 **iventicks** · eventicket-psi.vercel.app
 Event ticketing across 95 endpoints. Payments, fraud detection, refunds, bulk cancellation, payouts, offline-sync check-in, PWA.
+
+**Athelia** · athelia.com.au
+Production marketing site for an Australian supply chain and trade advisory, with the founder editing her own content through Sanity CMS. Next.js, Sanity, Vercel.
+
+**Winnie Home Of Fashion** · winnie-ecru.vercel.app
+Showcase site for a Lagos fashion atelier, built to turn a look a visitor loves into a WhatsApp conversation. Next.js, TypeScript, CI running unit and end-to-end tests.
 
 **Strategic Buys** · strategicbuys.com.au
 Property advisory site built as a six-scene scroll-scrubbed film, frame-locked seams, server-rendered.

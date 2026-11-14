@@ -9,7 +9,7 @@
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 const DESK = "C:/Users/Frederick Akam/Desktop";
-const { chromium } = require(`${DESK}/access-audit/node_modules/playwright`);
+const { chromium } = require("./deps.cjs");
 
 const html = `<!doctype html><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">

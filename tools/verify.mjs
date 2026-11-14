@@ -3,7 +3,7 @@ import { mkdir } from "node:fs/promises";
 import path from "node:path";
 
 const require = createRequire(import.meta.url);
-const { chromium } = require("C:/Users/Frederick Akam/Desktop/access-audit/node_modules/playwright");
+const { chromium } = require("./deps.cjs");
 
 const OUT = path.join(process.cwd(), "_verify");
 const URL = process.argv[2] || "http://127.0.0.1:8899/";
