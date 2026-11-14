@@ -154,7 +154,7 @@ html:not(.engine-on) .layer--report .layer__copy{ grid-row:3; padding:2.5rem var
 
 /* Copy, shared by both modes */
 .hero__name{
-  font-family:var(--serif); font-weight:350; font-size:clamp(3rem, 1.6rem + 6vw, 6rem);
+  font-family:var(--serif); font-weight:350; font-size:clamp(2.75rem, min(1.6rem + 6vw, 12.5svh), 6rem);
   line-height:.92; letter-spacing:-.035em; font-variation-settings:"opsz" 72;
 }
 .layer__copy .hero__role{ margin:1.1rem 0 0; font-weight:500; font-size:1.0625rem; letter-spacing:.005em; }
@@ -163,12 +163,12 @@ html:not(.engine-on) .layer--report .layer__copy{ grid-row:3; padding:2.5rem var
 .hero__cue svg{ width:14px; height:14px; }
 
 .layer__copy h3{
-  font-family:var(--serif); font-weight:400; font-size:clamp(1.875rem, 1.25rem + 2.1vw, 3rem);
+  font-family:var(--serif); font-weight:400; font-size:clamp(1.75rem, min(1.25rem + 2.1vw, 6svh), 3rem);
   line-height:1.04; letter-spacing:-.022em; font-variation-settings:"opsz" 60;
 }
-.layer__copy p{ margin:1rem 0 0; max-width:38ch; font-size:clamp(1.0625rem, 1rem + .25vw, 1.1875rem); line-height:1.55; color:var(--soft); }
+.layer__copy p{ margin:1rem 0 0; max-width:38ch; font-size:clamp(1rem, min(1rem + .25vw, 2.7svh), 1.1875rem); line-height:1.55; color:var(--soft); }
 .layer__copy .spec{ margin-top:1.25rem; font-size:.9375rem; line-height:1.5; color:var(--soft); }
-.layer--risk .layer__copy h3{ font-size:clamp(2.6rem, 1rem + 5.2vw, 5.75rem); line-height:.96; letter-spacing:-.035em; color:var(--on-dark); }
+.layer--risk .layer__copy h3{ font-size:clamp(2.4rem, min(1rem + 5.2vw, 10svh), 5.75rem); line-height:.96; letter-spacing:-.035em; color:var(--on-dark); }
 .layer--risk .layer__copy p{ max-width:34ch; }
 .layer--data .layer__copy h3 .num{ font-family:inherit; }
 
@@ -199,6 +199,8 @@ html:not(.engine-on) .layer--report .layer__copy{ grid-row:3; padding:2.5rem var
   position:sticky; top:0; height:100svh; overflow:hidden;
   background:var(--stage, var(--bone)); color:var(--ink);
   --sy:-50%; --cy:-50%;
+  --area-top:var(--bar-h); --area-bottom:3rem;
+  --area-mid:calc((var(--area-top) + 100svh - var(--area-bottom)) / 2);
 }
 .engine-on .engine__stage.dark{ color:var(--on-dark); }
 .engine-on .engine__stage::before{
@@ -207,7 +209,7 @@ html:not(.engine-on) .layer--report .layer__copy{ grid-row:3; padding:2.5rem var
 }
 .engine-on .layer{ display:contents; }
 .engine-on .layer__copy{
-  position:absolute; z-index:5; top:50%;
+  position:absolute; z-index:5; top:var(--area-mid);
   left:calc(var(--gutter) + 9.5rem); width:min(29rem, 31vw);
   opacity:0; pointer-events:none; will-change:transform, opacity;
 }
@@ -215,8 +217,8 @@ html:not(.engine-on) .layer--report .layer__copy{ grid-row:3; padding:2.5rem var
 .engine-on .layer__copy, .engine-on .layer__copy p, .engine-on .hero__stand, .engine-on .hero__cue{ color:inherit; }
 .engine-on .layer__copy p, .engine-on .hero__stand, .engine-on .hero__cue, .engine-on .layer__copy .spec{ color:var(--stage-soft, var(--ink-soft)); }
 .engine-on .layer__sheet{
-  position:absolute; top:50%; right:var(--gutter);
-  width:min(44vw, 46rem); height:min(80svh, 44rem);
+  position:absolute; top:var(--area-mid); right:var(--gutter);
+  width:min(44vw, 46rem); height:min(calc(100svh - var(--area-top) - var(--area-bottom) - 1.5rem), 44rem);
   display:flex; align-items:center; justify-content:center;
   transform-origin:50% 85%; will-change:transform, opacity;
 }
@@ -227,7 +229,7 @@ html:not(.engine-on) .layer--report .layer__copy{ grid-row:3; padding:2.5rem var
 .engine-on .layer--hero .layer__copy{ width:min(32rem, 34vw); }
 
 .engine-on .gauge{
-  display:block; position:absolute; z-index:12; left:var(--gutter); top:50%; transform:translateY(-50%);
+  display:block; position:absolute; z-index:12; left:var(--gutter); top:var(--area-mid); transform:translateY(-50%);
 }
 .gauge ol{ position:relative; list-style:none; margin:0; padding:0; display:grid; gap:.125rem; }
 .gauge ol::before{ content:""; position:absolute; left:5.5px; top:22px; bottom:22px; width:1px; background:currentColor; opacity:.28; }
@@ -272,9 +274,10 @@ html:not(.engine-on) .layer--report .layer__copy{ grid-row:3; padding:2.5rem var
   .engine-on .slab__rows .num, .engine-on .slab__rows .none{ font-size:.8125rem; }
 }
 @media (max-width:1023px) and (max-height:720px){
-  .engine-on .layer__sheet{ height:34svh; }
-  .engine-on .layer__copy, .engine-on .layer--hero .layer__copy{ top:calc(var(--bar-h) + 4.25rem + 34svh + 3rem); }
-  .engine-on .engine__note{ top:calc(var(--bar-h) + 4.25rem + 34svh + .3rem); }
+  .engine-on .layer__sheet{ height:32svh; }
+  .engine-on .layer--risk .layer__copy h3{ font-size:2rem; }
+  .engine-on .layer__copy, .engine-on .layer--hero .layer__copy{ top:calc(var(--bar-h) + 4.25rem + 32svh + 3rem); }
+  .engine-on .engine__note{ top:calc(var(--bar-h) + 4.25rem + 32svh + .3rem); }
   .hero__stand{ font-size:1rem; }
   .layer__copy p{ font-size:1rem; line-height:1.5; }
 }
@@ -569,13 +572,13 @@ html:not(.engine-on) .layer--report .layer__copy{ grid-row:3; padding:2.5rem var
   </article>
 
   <article class="entry">
-    <a class="entry__shot" href="https://winnie-ecru.vercel.app/" rel="noopener" tabindex="-1" aria-hidden="true">
+    <a class="entry__shot" href="https://winniefashionhome.com/" rel="noopener" tabindex="-1" aria-hidden="true">
       <picture><source srcset="shots/winnie.avif" type="image/avif"><img src="shots/winnie.webp" width="1600" height="1000" alt="" loading="lazy" decoding="async"></picture>
     </a>
     <div class="entry__body">
-      <h3><a href="https://winnie-ecru.vercel.app/" rel="noopener">Winnie Home Of Fashion</a></h3>
+      <h3><a href="https://winniefashionhome.com/" rel="noopener">Winnie Home Of Fashion</a></h3>
       <p class="what">A Lagos atelier, sold one WhatsApp chat at a time.</p>
-      <p class="detail">Turkish ready-to-wear, shoes and bags from two shops in Surulere. The site shows who Winnie is and the looks she brings in, and every look ends in a WhatsApp message, because that is where her customers already buy.</p>
+      <p class="detail">Built as a fashion magazine: Issue No. 01 puts 24 looks, made in Turkey and worn in Lagos, from the office to the owambe, with shoes and bags further in. Every look ends in a WhatsApp message to Winnie, because that is where her customers already buy. Two shops in Surulere, delivery across Nigeria.</p>
       <p class="detail">Every push runs lint, type checks, unit tests, a first-load JavaScript budget, and browser tests on desktop and phone.</p>
     </div>
     <div class="entry__side">
@@ -584,7 +587,7 @@ html:not(.engine-on) .layer--report .layer__copy{ grid-row:3; padding:2.5rem var
         <dt>Role</dt><dd>Sole developer, end to end</dd>
       </dl>
       <p><span class="mark">Client work</span></p>
-      <a class="url" href="https://winnie-ecru.vercel.app/" rel="noopener">winnie-ecru.vercel.app</a>
+      <a class="url" href="https://winniefashionhome.com/" rel="noopener">winniefashionhome.com</a>
     </div>
   </article>
 

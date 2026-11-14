@@ -29,7 +29,7 @@ const SITES = [
   { id: "iventicks",    url: "https://eventicket-psi.vercel.app/" },
   { id: "nvrgvp",       url: "https://www.nvrgvp.org/" },
   { id: "athelia",      url: "https://athelia.com.au/" },
-  { id: "winnie",       url: "https://winnie-ecru.vercel.app/" },
+  { id: "winnie",       url: "https://winniefashionhome.com/" },
 ];
 
 const ONLY = process.argv.slice(2);

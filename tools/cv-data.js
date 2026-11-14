@@ -74,7 +74,7 @@ module.exports = {
     ["ProForge", "proforge.com.au", "AI phone receptionist for trade businesses. Twilio telephony, Vapi voice layer, calendar booking, SMS, quote follow-up. Next.js, TypeScript, Supabase, n8n."],
     ["iventicks", "eventicket-psi.vercel.app", "Event ticketing across 95 endpoints. Payments, fraud detection, refunds, bulk cancellation, payouts, offline-sync check-in, PWA."],
     ["Athelia", "athelia.com.au", "Production marketing site for an Australian supply chain and trade advisory, with the founder editing her own content through Sanity CMS. Next.js, Sanity, Vercel."],
-    ["Winnie Home Of Fashion", "winnie-ecru.vercel.app", "Showcase site for a Lagos fashion atelier, built to turn a look a visitor loves into a WhatsApp conversation. Next.js, TypeScript, CI running unit and end-to-end tests."],
+    ["Winnie Home Of Fashion", "winniefashionhome.com", "Magazine-style site for a Lagos fashion house: 24 looks in Issue No. 01, each ending in a WhatsApp conversation. Next.js, TypeScript, CI running unit and end-to-end tests."],
     ["Strategic Buys", "strategicbuys.com.au", "Property advisory site built as a six-scene scroll-scrubbed film, frame-locked seams, server-rendered."],
     ["Asprey Lawyers", "aspreylawyers.com", "Melbourne law firm site in six languages. Next.js 15, React 19, Tailwind v4."],
     ["Nikunj", "nikunj.com.au", "Sponsorship platform for a racing driver. Client-editable record via embedded studio. Sanity CMS, Supabase, GA4."],

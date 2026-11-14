@@ -17,7 +17,7 @@ ASSEMBLY: one static HTML file, no build step, under 600 KB, so it opens fast on
 
 INSTRUMENT: a fixed gauge on the left edge, five ticks (REPORT / FIGURES / ASSESSMENT / RISK / DATA), the active one lit. At DATA a counter runs once from 0 to 5,880,000.
 
-SECTIONS: first frame is the name, "Product engineer, Kaduna, Nigeria, UTC+1" and "Ten years building software. The last four spent shipping production platforms end to end, from schema to interface." over the REPORT capture, with "Email me" pinned top right throughout > the engine > "Eight more, all live", each with capture, one line, stack, role and URL: ProForge, iventicks, Athelia (production build for an Australian trade advisory, founder-edited in Sanity), Winnie Home Of Fashion (client work, preview at winnie-ecru.vercel.app), Strategic Buys, Asprey Lawyers, Nikunj, NVRGVP > In development (ChargeCore, JARVIS, marked private) and Public code (plan-gate, access-audit) > Record, unchanged > the ask: "Email me" (akamfrederick@gmail.com, subject "Hiring: product engineer"), the CV PDF beside it, and "UTC+1: the same working day as London and Berlin, and US East mornings."
+SECTIONS: first frame is the name, "Product engineer, Kaduna, Nigeria, UTC+1" and "Ten years building software. The last four spent shipping production platforms end to end, from schema to interface." over the REPORT capture, with "Email me" pinned top right throughout > the engine > "Eight more, all live", each with capture, one line, stack, role and URL: ProForge, iventicks, Athelia (production build for an Australian trade advisory, founder-edited in Sanity), Winnie Home Of Fashion (client work, winniefashionhome.com), Strategic Buys, Asprey Lawyers, Nikunj, NVRGVP > In development (ChargeCore, JARVIS, marked private) and Public code (plan-gate, access-audit) > Record, unchanged > the ask: "Email me" (akamfrederick@gmail.com, subject "Hiring: product engineer"), the CV PDF beside it, and "UTC+1: the same working day as London and Berlin, and US East mornings."
 
 DESIGN: the engine grades from bone at REPORT to ink at DATA, then cuts back to bone; oxide is the only accent, on the lit tick and the email button (existing tokens). Newsreader for names and the risk sentence, IBM Plex Sans for body, IBM Plex Mono for every number. Tone: exact, calm, checkable.
 
@@ -32,8 +32,8 @@ VERIFY on localhost before telling me it's done: tools/verify.mjs passes at four
 - 5.88M records and the breakdown: the current PropInfo card in index.html.
 - Athelia: athelia.com.au returns 200 and serves Next.js and Sanity from Vercel. Built by Frederick,
   not labelled paid (his answer, 14 Nov).
-- Winnie: paid client work (his answer, 14 Nov). Preview at winnie-ecru.vercel.app returns 200;
-  winniefashionhome.com still serves the old WordPress site.
+- Winnie: paid client work (his answer, 14 Nov). The new Next.js site is live at winniefashionhome.com
+  (confirmed 14 Nov; an earlier note that the domain still ran WordPress was out of date).
 - All nine live URLs returned 200 on 14 Nov.
 
 ## Deviations recorded during the build (14 Nov 2026)

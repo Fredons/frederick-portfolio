@@ -76,8 +76,8 @@ Event ticketing across 95 endpoints. Payments, fraud detection, refunds, bulk ca
 **Athelia** · athelia.com.au
 Production marketing site for an Australian supply chain and trade advisory, with the founder editing her own content through Sanity CMS. Next.js, Sanity, Vercel.
 
-**Winnie Home Of Fashion** · winnie-ecru.vercel.app
-Showcase site for a Lagos fashion atelier, built to turn a look a visitor loves into a WhatsApp conversation. Next.js, TypeScript, CI running unit and end-to-end tests.
+**Winnie Home Of Fashion** · winniefashionhome.com
+Magazine-style site for a Lagos fashion house: 24 looks in Issue No. 01, each ending in a WhatsApp conversation. Next.js, TypeScript, CI running unit and end-to-end tests.
 
 **Strategic Buys** · strategicbuys.com.au
 Property advisory site built as a six-scene scroll-scrubbed film, frame-locked seams, server-rendered.
